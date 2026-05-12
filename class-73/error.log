@@ -1,0 +1,20 @@
+[10-May-2026 08:52:23 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:52:29 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:52:50 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:52:51 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:52:51 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:31 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:31 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:31 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:31 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:31 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:32 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:32 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:32 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:32 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:32 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:53:33 Europe/Berlin] PHP Warning:  Undefined variable $user in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
+[10-May-2026 08:54:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "e" in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php:15
+Stack trace:
+#0 {main}
+  thrown in G:\Arif-WDPF-70\xampp\htdocs\class-73\error.php on line 15
