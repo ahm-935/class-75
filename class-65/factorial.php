@@ -23,6 +23,6 @@ for ($i = 1; $i <= $number; $i++) {
 <form action="" method="POST">
      <input type="number" name="num" value="5"><br>    
      <input type="submit" name="submit_btn">
-     <hr>
-     <?php echo $factorial; ?>
+     <br>
+     <?= "Factorial is  " .  $factorial ?? "" ?>
 </form>
