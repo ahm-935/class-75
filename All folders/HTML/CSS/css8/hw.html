@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            gap: 5px;
+            background-color: rgb(220, 243, 236) ;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            background-color: rgba(168, 212, 37, 0.677);
+            position: sticky;
+            top: 0;
+            padding: 20px;
+        }
+
+        section {
+            background-color: saddlebrown;
+            height: 500px;
+            padding: 50px;
+        }
+
+        #section1 {
+            background-color: rgb(112, 18, 54);
+        }
+
+        #section2 {
+            background-color: rgb(17, 107, 29);
+        }
+
+        #section3 {
+            background-color: rgb(45, 52, 134);
+        }
+
+        #top {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background-color: rgb(73, 1, 16);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            justify-content: center;
+            display: flex;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#section1">Section1</a>
+        <a href="#section2">Section2</a>
+        <a href="#section3">Section3</a>
+    </nav>
+    <section id="section1">
+        <h1>Title 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </section>
+    <section id="section2">
+        <h1>Title 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </section>
+    <section id="section3">
+        <h1>Title 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </section>
+    <a href="#" id="top" title="Click to top"> &uparrow; </a>
+</body>
+
+</html>

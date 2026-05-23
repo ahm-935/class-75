@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach-Map</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        arr.forEach((v,i)=> {
+            document.write(i  + " - " + v + '<br>');
+        });
+        // document.write(arr.forEach);
+        document.write('---------------------<br>');
+
+
+        // Map
+        let arr2 = arr.map((v, i) =>{
+                return v * v * v;
+                // return Math.pow(v, 3);
+            });
+        
+        
+        document.write(arr2);
+    
+    </script>
+</body>
+</html>

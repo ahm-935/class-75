@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Form</title>
+</head>
+
+<body>
+    <form id="regiForm">
+        <label for="name">Full Name:</label><br>
+        <input type="text" name="name" value="Azmaine Ahmed"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" name="email" value="azmaine76@gmail.com"><br>
+        <span class="error" id="emailError"></span><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" name="age" value="20"><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="other">Other<br><br>
+
+        <label for="interests" id="interests">Interests:</label><br>
+        <input type="checkbox" name="interest" value="Reading">Reading
+        <input type="checkbox" name="interest" value="Travelling">Travelling
+        <input type="checkbox" name="interest" value="coding">Coding
+        <input type="checkbox" name="interest" value="sports">Sports<br><br>
+
+        <label for="agreements">Agree to terms:</label><br>
+        <input type="checkbox" name="agreements" value="terms">I agree to the terms and conditions
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="form.js"></script>
+    <script>
+        new DynamicForm(`#regiForm`);
+    </script>
+
+</body>
+
+</html>

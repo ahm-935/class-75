@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel and Consonant Counter
+
+    </title>
+</head>
+<body>
+    <script>
+        let a = ["a", "b", "c", "d", "e", "f", "g", "H", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+        let v = 0;
+        let c = 0;
+        // for (let i = 0; i < a.length; i++) {
+        //     if (a[i] === "a" || a[i] === "e" || a[i] === "i" || a[i] === "o" || a[i] === "u") {
+        //         v++;
+        //     } else {
+        //         c++;
+        //     }
+        // }
+        for(let value of a){
+            if (value === "a" || value === "e" || value === "i" || value === "o" || value === "u") {
+                v++;
+            } else {
+                c++;
+            }
+        }
+        document.write(`Vowels: ${v} <br> Consonants: ${c}`);
+    </script>
+</body>
+</html>

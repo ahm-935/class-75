@@ -1,0 +1,96 @@
+/* ID Selector */
+#para {
+    color:blue;
+}
+/* Class Selector */
+.para {
+    color: red;
+}
+/* Type Selector */
+h1 {
+    color: green;
+    /* background-color: #352b69; */
+    background-color: rgba(255, 0, 0, .5);
+}
+body{
+    margin: 0;
+}
+strong{
+    text-transform: lowercase;
+}
+button{
+    background-color: green;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+}
+a{
+    color: seagreen;
+}
+/* Universal Selector */
+* {
+    text-transform: uppercase;
+    /* color: tomato; */
+}
+/* Attribute Selector */
+[type="text"] {
+    width: 200px;
+    height: 50px;
+}
+/* Compound Selector */
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+p.para {
+    font-size: 30px;
+}
+.div.para {
+    background-color: burlywood;
+}
+/* Decendant Selector */
+p strong {
+    font-size: 30px;
+}
+.para strong {
+    color: black;
+}
+.para strong i{
+    color: red;
+}
+/* Group Selector */
+.para, input {
+    background-color: cyan;
+}
+ /* .para{
+    background-color: cyan;
+ }
+ input{
+    background-color: cyan;
+ } */
+
+/* Pseudo Class */
+button:hover{
+    background-color: red;
+}
+button:active{
+    background-color: yellow;
+}
+a:visited{
+    color: rgb(132, 2, 128);
+}
+input:focus{
+    background-color: red;
+}
+/* Pseudo element */
+.para::first-letter{
+    color: rgb(40, 6, 98);
+    font-size: 50px;
+}
+.para::first-line{
+    text-transform: lowercase;
+}
+::selection{
+    background-color: rgb(232, 137, 21);
+    color: #067c2b;
+}

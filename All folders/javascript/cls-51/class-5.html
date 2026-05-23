@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-5</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            getInfo(_n, _m) {
+                return `Student name : ${_n} <br> 
+                Student marks : ${_m} <br>`
+            }
+        }
+        let name = prompt("Enter student name: ");
+        let marks = prompt("Enter student marks: ");
+        let student = new Student();
+        document.write(student.getInfo(name, marks));
+    </script>
+</body>
+
+</html>

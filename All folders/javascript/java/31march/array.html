@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+
+    <script>
+        let arr = ["Mina", 20, true, ["Dhaka", "Chittagong", "Rangpur"], null,
+            { name: "Arif", age: 20 }, [1, 2, 3, [4, 5, 6]]];
+        document.write(arr[0] + "<br>"); // Accessing an element
+        console.log(arr); // Accessing an element
+
+        document.write(arr.length + "<br>"); // Accessing the length of the array
+        document.write(arr[1] + "<br>"); // Accessing an element
+        document.write(arr[3][2] + "<br>"); // Accessing a nested array element
+        document.write(arr[5].name + "<br>"); // Accessing an object property within the array
+        document.write(arr[5]["age"] + "<br>"); // Accessing an object property using bracket notation
+        document.write(arr[6][2] + "<br>"); // Accessing an element within a nested array
+        document.write(arr[6][3][1] + "<br>")
+
+        let arr2 = new Array("Apple",350,null);
+        console.log(arr2);
+
+        let arr3 = new Array(3); // Creates an array with 3 empty slots
+        arr3[1] = "Hello"; // Assigning a value to the second slot
+        console.log(arr3); // Output: [empty, "Hello", empty]
+        arr3[2000] = "Hello World"; // Assigning a value to the 2000th slot
+        console.log(arr3);
+
+        let arr4 = [123, 456, 789];
+
+        let arr5 = ["abc", ...arr4, "xyz"]; // Using the spread operator to combine arrays
+        console.log(arr5);
+
+    </script>
+
+
+
+</body>
+
+</html>

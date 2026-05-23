@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter</title>
+</head>
+<body>
+    <script>
+        class TraineeUsername{
+            username;
+
+
+            get fullName(){
+                console.log("Getter called");
+                return this.username
+            }
+            set fullName(_uname){
+                this.username = _uname
+                console.log("Setter called");
+            }
+        }
+        let trainee = new TraineeUsername();
+        trainee.fullName = "Rahul";
+        trainee.fullName;
+        // console.log(trainee.username);
+        document.write(trainee.fullName);
+    </script>
+</body>
+</html>

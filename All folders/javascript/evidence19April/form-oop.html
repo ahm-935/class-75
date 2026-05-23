@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form(OOP)</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        th {
+            font-size: 24px;
+            color: #6739e3;
+        }
+
+        .submit {
+            background-color: #2016ae;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .submit:hover {
+            background-color: #6739e3;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" cellspacing="0" cellpadding="10" align="center">
+        <th>Feedback Form</th>
+        <tr>
+            <form id="fbForm">
+                <td>
+                    <label for="name">Username:</label>
+                    <input type="text" id="name" name="Username" value="Abir Hosen"> <br>
+                    <span id="nameError" class="error"></span><br>
+
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" value="ahm8354@yahoo.com"> <br>
+                    <span id="emailError" class="error"></span><br>
+
+                    <label for="feedback">Feedback:</label><br>
+                    <textarea name="feedback" id="feedback">N/A</textarea><br>
+
+                    <label for="ratings">Ratings:</label>
+                    <input type="radio" id="ratings" name="ratings" value="1" min="1" max="5">1
+                    <input type="radio" id="ratings" name="ratings" value="2" min="1" max="5">2
+                    <input type="radio" id="ratings" name="ratings" value="3" min="1" max="5">3
+                    <input type="radio" id="ratings" name="ratings" value="4" min="1" max="5">4
+                    <input type="radio" id="ratings" name="ratings" value="5" min="1" max="5">5 <br>
+                    <span id="ratingsError" class="error"></span><br>
+
+
+                    <label for="features">Features used:</label><br>
+                    <input type="checkbox" id="features" name="features" value="Login">Login
+                    <input type="checkbox" id="features" name="features" value="Search">Search
+                    <input type="checkbox" id="features" name="features" value="Dashboard">Dashboard
+                    <input type="checkbox" id="features" name="features" value="Reports">Reports <br>
+                    <span id="featuresError" class="error"></span><br>
+
+
+                    <label for="Usertype">User Type:</label>
+                    <select name="Usertype" id="Usertype">
+                        <option value="admin">Admin</option>
+                        <option value="user">Guest</option>
+                        <option value="guest">Registered</option>
+                    </select><br>
+
+                    <input class="submit" type="submit" value="Submit">
+                </td>
+            </form>
+        </tr>
+    </table>
+    <script src="oop-form.js"></script>
+    <script>
+        new DynamicForm(`#fbForm`);
+    </script>
+</body>
+
+</html>

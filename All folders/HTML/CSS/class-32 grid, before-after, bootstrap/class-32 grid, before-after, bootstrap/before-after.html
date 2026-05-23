@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .emoji{
+            text-align: center;
+        }
+        .emoji::after{
+            content: "😎";
+        }
+        .emoji::before{
+            content: "👻";
+        }
+        .hr{
+            text-align: center;
+            position: relative;
+        }
+        .hr::before{
+            content: "";
+            position: absolute;
+            width: calc(50% - 40px);
+            height: 2px;
+            background-color: blue;
+            left: 0;
+            top: 50%;
+        }
+        .hr::after{
+            content: "";
+            position: absolute;
+            width: calc(50% - 40px);
+            height: 2px;
+            background-color: rgb(3, 95, 61);
+            right: 0;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="emoji">Hello!</div>
+    <h3 class="hr">Title</h3>
+</body>
+</html>

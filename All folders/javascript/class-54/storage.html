@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem('name', 'Arif');
+        localStorage.setItem('age', '25');
+        localStorage.setItem('address', 'Dhaka');
+        console.log(localStorage.getItem('name'));
+        console.log(localStorage.getItem('age'));
+        console.log(localStorage.getItem('address'));
+        localStorage.removeItem('age');
+        // localStorage.clear();
+
+        sessionStorage.setItem('name', 'Arif');
+        sessionStorage.setItem('age', '25');
+        sessionStorage.setItem('address', 'Dhaka');
+        console.log(sessionStorage.getItem('name'));
+        console.log(sessionStorage.getItem('age'));
+        console.log(sessionStorage.getItem('address'));
+        sessionStorage.removeItem('age');
+    </script>
+</body>
+</html>

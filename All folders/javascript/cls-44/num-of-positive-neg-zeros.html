@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of positive, negative and zeros</title>
+</head>
+
+<body>
+    <script>
+        var data = [4, 4, -4, -1, 0, -8, 0, 45, 9, 79];
+        let pos = 0;
+        let neg = 0;
+        let zero = 0;
+        sum = 0;
+        for (let i = 0; i < a.length; i++) {
+            sum += a [i]; 
+            if (a [i] > 0) {
+                pos++;
+            } else if (a [i] < 0) {
+                neg++;
+            } else {
+                zero++;
+            }
+        }
+        document.write(`Positive: ${pos} <br> Negative: ${neg} <br> Zero: ${zero}`);
+        document.write(`<br> Sum: ${sum}`);
+    </script>
+</body>
+
+</html>

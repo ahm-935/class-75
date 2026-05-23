@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+    <script>
+        // var -> function scope
+        // let -> block scope
+        // const -> block scope
+        function checkScope() {
+            if (true) {
+                var a = 10;
+                let b = 20;
+                document.write("Var:" + a + '<br>');
+                document.write("Let:" + b + '<br>');
+            }
+            document.write("----------------------------<br>");
+              document.write("Var:" + a + '<br>');
+                document.write("Let:" + b + '<br>');
+
+        }
+        checkScope();
+    </script>
+
+</body>
+
+</html>

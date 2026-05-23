@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Count from Array</title>
+</head>
+<body>
+    <script>
+        var data = [8,3,-6,-1,0,-8,0,19,4,77,0];
+        let posNum = 0;
+        let negNum = 0;
+        let zeroes = 0;
+        let sum = 0;
+        for (let i = 0; i < data.length; i++) {
+            sum += data [i];
+            if (data [i] > 0) {
+                posNum++;
+            } else if (data [i] < 0) {
+                negNum++;
+            } else {
+                zeroes++;
+            }
+        }
+        document.write(`Positive numbers: ${posNum} <br> Negative numbers: ${negNum} <br> Number of Zeroes: ${zeroes} <br>`);
+        document.write(`Sum: ${sum}`);
+       
+    </script>
+</body>
+</html>

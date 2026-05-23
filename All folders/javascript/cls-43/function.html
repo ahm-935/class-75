@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <button onclick="test()">Click Here</button>
+    <br><br>
+    <script>
+        // function definition
+        function test(a) {
+            console.log("Hello" + "<br>");
+        }
+        function sum(x,y=98,z=1){
+            // document.write("Sum: " + (x+y-z) + "<br>");
+            // document.write(`Sum: ${x+y-z} <br>`);
+            document.write("Sum: " + (x*y*z) + "<br>");
+        }
+        // test(); // calling the function
+        test();
+        sum(225,54);
+        sum(225); // uses default value for y
+
+
+        // function expression
+        let test2 = function() {
+            console.log("Hello from function expression" + "<br>");
+        }
+        test2();    
+
+        // arrow function
+        let test3 = () => {
+            console.log("Hello from arrow function" + "<br>");
+        }
+        test3();    
+
+       // void function  (does not return any value)
+       function voidFunction() {
+            console.log("This is a void function" + "<br>");
+       }    
+         voidFunction();
+
+     </script>
+
+</body>
+</html>

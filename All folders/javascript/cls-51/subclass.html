@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubClass</title>
+</head>
+
+<body>
+    <script>
+        // Parent Class|SuperClass
+        class Student {
+            name;
+            age;
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+         getInfo() {
+            document.write("Hello " + this.name + " you are " + this.age + " years old");
+        }
+        }
+        // Child Class|SubClass
+        class Result extends Student {
+            score;
+            grade;
+            constructor(_name, _age, _score, _grade) {
+                super(_name, _age);
+                this.score = _score;
+                this.grade = _grade;
+            }
+        }
+
+
+        // let s1 = new Student("Moyna", 22);
+        // let s2 = new Student("Sam", 23);
+        // console.log(s1.name);
+        let result = new Result("Moyna", 22, 90, "A");
+        console.log(result.name);
+        result.getInfo();
+        console.log(result.score);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+/* ID selector */
+#para {
+    color: royalblue
+}
+
+/* Class selector */
+.para {
+    color: red;
+}
+
+/* type selector */
+h1 {
+    color: green;
+}
+a{
+   color: rgb(4, 150, 101); 
+}
+
+/* universal selector */
+/* 
+*{ 
+    text-transform: uppercase;
+} */
+
+/* attribute selector */
+
+[type="text"] {
+    width: 200px;
+    ;
+}
+
+/* compound selector */
+p.para {
+    color: rgb(8, 196, 49);
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(26, 151, 26);
+}
+
+input[type="checkbox"] {
+    width: 100px;
+    height: 20px;
+    color: rgb(226, 15, 15);
+}
+
+/* descendant selector */
+.para strong {
+    color: blue;
+}
+
+.para em {
+    color: red;
+}
+
+/* group selector */
+.para,
+input {
+    background-color: rgb(136, 189, 87);
+}
+
+/* pseudo class */
+button:hover {
+    background-color: rgb(116, 7, 7);
+}
+
+button:active {
+    background-color: rgb(147, 5, 241);
+}
+a:visited{
+    color: rgb(145, 61, 61);
+}   
+input:focus{
+    background-color: rgb(255, 0, 0);
+}
+/* pseudo element */
+div::first-letter {
+    color: rgb(255, 0, 0);
+}   
+::selection{
+    background-color: rgb(255, 0, 0);
+}

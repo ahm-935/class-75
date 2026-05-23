@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function Expression
+        let sum = function(a, b){    // Anonymous function assigned to a variable
+            return a + b;
+        }
+        document.write(sum(5, 10));
+
+        // Arrow Function
+        let sub = (a, b) => {return a - b}  // function () {}
+        document.write('<br>');
+        document.write(sub(10, 5));
+
+
+        let str = () => "Hello"; // function () {}
+        document.write('<br>');
+        document.write(str());
+
+        let greet = name => {return "Hi " + name }; // function (name) {}
+        document.write('<br>');
+        document.write(greet("Arif"));
+
+        let multiply = (a, b) => a * b; 
+        document.write('<br>');
+        document.write(multiply(5, 10));
+    </script>
+</body>
+</html>

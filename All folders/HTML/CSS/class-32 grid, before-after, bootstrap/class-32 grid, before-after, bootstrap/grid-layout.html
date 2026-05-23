@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            background-color: aqua;
+            padding: 10px;
+            /* display: inline-grid; */
+            display: grid;
+            /* grid-template-columns: 50px auto auto auto; */
+            /* grid-template-columns: 50px repeat(3, auto); */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 50px 100px;
+            gap: 10px;
+        }
+        .grid-item{
+            /* width: 50px;
+            height: 50px; */
+            background-color: rgb(148, 127, 255);
+            order: 12;
+        }
+        .grid-item:nth-child(5){
+            order: 1;
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 1 / span 2;
+        }
+        .grid-item:nth-child(3){
+            /* grid-row-start: 2;
+            grid-row-end: 4; */
+            grid-row-start: 2;
+            grid-row-end: span 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+    </div>
+    <p style="
+        line-height: 25px;
+        word-spacing: 15px;
+        letter-spacing: 5px;
+    ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quibusdam accusamus animi corporis sed dignissimos? Maiores distinctio eos, quo vel autem nulla dolorem sit possimus quas consequuntur nisi, amet quisquam?</p>
+</body>
+</html>

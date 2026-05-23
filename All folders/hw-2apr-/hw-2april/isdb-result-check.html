@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IsDB Result Check</title>
+  </head>
+  <body>
+    <script>
+      function resultCheck(name, midMonthScore, monthlyScore) {
+        if (midMonthScore < 0 || midMonthScore > 50 || monthlyScore < 0 || monthlyScore > 50)
+          return document.write("Please enter valid marks");
+
+        if (name == "") {
+          name = "Unknow trainee";
+        }
+
+        let finalScore = ((midMonthScore * 0.2)
+         + (monthlyScore * 0.8))/50 * 100; // prettier-ignore
+
+        let resultStatus = finalScore >= 60 ? "Pass" : "Fail";
+
+        document.write(name + ": Final Score = " + finalScore + "%, Result = " + resultStatus);
+      }
+
+      resultCheck(prompt("Enter Your Name"), prompt("Enter Mid Monthly Score"), prompt("Enter Monthly Score"));
+    </script>
+  </body>
+</html>

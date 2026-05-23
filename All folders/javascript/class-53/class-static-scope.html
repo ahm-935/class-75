@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            username;
+            static email = "john@example.com";
+            #password = "1020304050";
+            constructor(name, email) {
+                this.username = name;
+                this.email = email;
+            }
+            displayUserInfo() {
+                return `
+                Username: ${this.username} <br>
+                Email: ${this.email} <br> 
+                Password: ${this.#password} <br>
+                `;
+            }
+            static displayEmail() {
+                return `This is email: ${this.email}`;
+            }
+            static add (_n1, _n2) {
+                return `Sum: ${_n1 + _n2} ` ;
+            }
+        }
+        class Profile extends User {
+            address;
+            constructor(address, name, email) {
+                super(name, email);
+                this.address = address;
+            }
+        }
+        document.write(profile.password);
+        document.write("<br>");
+        document.write(User.email);
+        document.write(user.email);
+        document.write("<br>");
+        document.write(user.displayUserInfo());
+    </script>
+</body>
+
+</html>

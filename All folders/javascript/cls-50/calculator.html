@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        class Calculator{
+            num1;
+            num2;
+            result;
+            add(_n1, _n2){
+                this.num1 = _n1;
+                this.num2 = _n2;
+                this.result = this.num1 + this.num2;
+                return this.num1 + this.num2;
+            }
+        }
+        let calc = new Calculator();
+        console.log(calc.add(10, 20));
+    </script>
+</body>
+</html>

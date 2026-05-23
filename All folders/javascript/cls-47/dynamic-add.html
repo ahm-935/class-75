@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button id="btn">Add items</button>
+    <ul>
+    </ul>
+    <script>
+        let input = document.querySelector("input"),
+            button = document.querySelector("button"),
+            ul = document.querySelector("ul");
+
+        button.addEventListener("click", () => {
+            console.log(input.value);
+            let li = document.createElement("li");
+            li.innerHTML = input.value + " <button onclick='deleteItem(this)'>&times;</button>";
+            input.value = "";
+            console.log(li);
+            // ul.append(li);
+            ul.prepend(li);
+        })
+        function deleteItem(btn) {
+            btn.parentNode.remove();
+        }
+        input.addEventListener("keyup", (e) => {
+            if (e.keyCode === 13) {
+                button.click();
+            }
+        });
+    </script>
+</body>
+
+</html>

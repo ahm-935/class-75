@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cls2</title>
+</head>
+<body>
+    <script>
+        class Student {
+            name;
+            marks;
+            getInfo() {
+                // return this.sName + " :" + this.sMarks;
+                document.write("Student name : " + this.Name + " <br>" );
+                document.write("Student marks : " + this.Marks + " <br>" );
+            }
+        }
+        let nameValue = prompt("Enter student name");
+        let marksValue = prompt("Enter student marks");
+        let student = new Student(); // new Student(nameValue, marksValue); // new Student(nameValue, Marks);
+        // student.name = nameValue;
+        // student.marks = marksValue;
+        student.getInfo();
+    </script>
+</body>
+</html>

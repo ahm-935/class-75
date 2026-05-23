@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .bg:nth-child(1) {
+            background: linear-gradient(rgb(243, 35, 35), green, yellow, blue);
+        }
+
+        .bg:nth-child(2) {
+            background: linear-gradient(to top, rgb(170, 8, 8), green, rgb(173, 173, 8));
+        }
+
+        .bg:nth-child(3) {
+            background: linear-gradient(45deg, red, green, yellow);
+        }
+
+        .bg:nth-child(4) {
+            background: linear-gradient(400deg, yellow, green, rgb(3, 129, 3), orange);
+        }
+
+        .bg:nth-child(5) {
+            background: radial-gradient(red, green);
+        }
+
+        .bg:nth-child(6) {
+            background: radial-gradient(circle at top left, red, green, yellow);
+        }
+
+        .bg:nth-child(7) {
+            background: conic-gradient(red, green, yellow);
+        }
+
+        .bg:nth-child(8) {
+            background: radial-gradient(circle at top left, red, green, yellow);
+        }
+
+        .bg:nth-child(9) {
+            background: repeating-linear-gradient(red, green)
+        }
+
+        .image {}
+
+        .bg-img1 {
+            height: 800px;
+            width: 100%;
+            background: url("assets/background76-ffe24836f452.jfif");
+        }
+
+        .bg-img2 {
+            background: url("assets/GTRownload.jfif");
+            height: 500px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+    <div class="bg"> </div>
+
+    <br><br>
+    <section class="image">
+        <div class="bg-img1"></div><br>
+        <div class="bg-img2"></div>
+    </section>
+</body>
+
+</html>

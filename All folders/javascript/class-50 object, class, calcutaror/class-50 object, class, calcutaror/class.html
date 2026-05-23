@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Trainee {
+            // fName;
+            // lName;
+            constructor(_fName, _lName=""){
+                this.fName = _fName;
+                this.lName = _lName;
+                // this.printFullName();
+            }
+            fullName() {
+                return this.fName + ' ' + this.lName;
+            }
+            // printFullName() {
+            //     console.log(this.fullName());
+            // }
+        }
+        // let traineeFN = prompt("Enter Trainee First Name");
+        // let traineeLN = prompt("Enter Trainee Last Name");
+
+        let trainee = new Trainee("John", "Deo");    // instance of Trainee class
+        // document.write(trainee.fName);
+        // document.write("<br>");
+        // document.write(trainee.fullName());
+        // trainee.fName = 'Raju';
+        // trainee.lName = 'Ahmad';
+        // document.write("<br>");
+        // document.write(trainee.fullName());
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Trainee {
+            name;
+            #dob;
+            #address;
+            constructor(name, dob = "12-12-2000", address = "DHAKA") {
+                this.name = name;
+                this.#dob = dob;
+                this.#address = address;
+            }
+            displayName(){
+                document.write(this.name+"<br>");
+                document.write(this.#dob+"<br>");
+            }
+            updateAddress(_add){
+                this.#address = _add;
+            }
+            _displayDob(){
+                document.write(this.#dob+"<br>");
+            }
+        }
+        class Result extends Trainee {
+            grade;
+            marks;
+            constructor(grade, marks, name) {
+                super(name);
+                this.grade = grade;
+                this.marks = marks;
+            }
+        }
+        // let result = new Result("A", 80, "John");
+        // document.write(result.dob + "<br>");
+        // result.displayName();
+        // result.displayDob();
+
+        let trainee = new Trainee("John");
+        // trainee.address = "Dhaka";
+        document.write(trainee.dob + "<br>");
+        // document.write(trainee._displayDob() + "<br>");
+        trainee.displayName();
+        // document.write(trainee.#dob+"<br>");
+        // trainee.updateAddress("Chittagong");
+        document.write(trainee.address);
+    </script>
+</body>
+</html>

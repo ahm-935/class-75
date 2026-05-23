@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IsDB Result Check</title>
+  </head>
+  <body>
+    <label for="name-field">Name:</label>
+    <input type="text" name="name" id="name-field" /> <br /><br />
+    <label for="mid-month-score">Mid Monthly Score:</label>
+    <input type="number" name="mid-month-score" id="mid-month-score" /> <br /><br />
+    <label for="monthly-score">Monthly Score:</label>
+    <input type="number" name="monthly-score" id="monthly-score" /> <br /><br />
+    <button class="submit-button">Check Score</button>
+
+    <h4 id="result-displayer"></h4>
+
+    <script>
+      // Event After clicking button
+      document.querySelector(".submit-button").addEventListener("click", function () {
+        // Taking values from input field
+        const traineeName = document.getElementById("name-field").value;
+        const traineeMidMonthlyScore = parseInt(document.getElementById("mid-month-score").value);
+        const traineeMonthlyScore = parseInt(document.getElementById("monthly-score").value);
+        const resultDisplayer = document.getElementById("result-displayer");
+        console.log(traineeName, traineeMidMonthlyScore, traineeMonthlyScore);
+
+        // Displaying the result
+        resultDisplayer.innerText = resultCheck(traineeName, traineeMidMonthlyScore, traineeMonthlyScore);
+      });
+
+      // Result Check Function
+      function resultCheck(name, midMonthScore, monthlyScore) {
+        if (midMonthScore < 0 || midMonthScore > 50 || monthlyScore < 0 || monthlyScore > 50)
+          return "Please enter valid marks";
+
+        if (name.trim() == "") {
+          name = "Unknow trainee";
+        }
+
+        let finalScore = ((midMonthScore * 0.2)
+         + (monthlyScore * 0.8))/50 * 100; // prettier-ignore
+
+        let resultStatus = finalScore >= 60 ? "Pass" : "Fail";
+
+        let resultStirng = name + ": Final Score = " + finalScore + "%, Result = " + resultStatus;
+
+        return resultStirng;
+      }
+    </script>
+  </body>
+</html>

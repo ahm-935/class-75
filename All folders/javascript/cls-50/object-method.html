@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obj-Method</title>
+</head>
+<body>
+    
+    <script>
+        let obj = {
+            fName: "Shakib",
+            lName: "Al Hasan",
+            age: 34,
+            fullName: function(){
+                return this.fName + " " + this.lName;
+            }
+        }
+        document.write(obj.lName);
+        document.write("<br>");
+        document.write(obj.fullName());
+        document.write("<br>");
+        obj.fName = "Raju";
+        document.write(obj.fullName());
+    </script>
+</body>
+</html>

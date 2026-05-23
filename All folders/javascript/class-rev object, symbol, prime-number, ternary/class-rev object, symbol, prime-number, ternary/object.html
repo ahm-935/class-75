@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 10;
+        // document.writeln(x);
+
+       let a = {
+           name: "Mina",
+           age: 10,
+           "user ID": 20,
+           "active": true,
+       };
+       document.writeln("Name: " + a.name + "<br>");
+       document.writeln("User ID: " + a["user ID"] + "<br>");
+       document.writeln("Age: " + a.age + "<br>");
+       document.writeln("Age: " + a["age"] + "<br>");
+       console.log(a);
+       delete a.age;
+       console.log(a);
+       document.writeln("Age: " + a.age + "<br>");
+       
+       let b = new Object();
+       b.name = "Raju";
+       b.age = 9;
+       b.user_id = 9;
+
+       document.writeln("Name: " + b.name + "<br>");
+
+       let c = Object.create(
+                        {
+                            a:"abc",
+                            b:123,
+                            c:true
+                        }
+                    );
+
+        document.writeln("A: " + c.a + "<br>");
+        document.writeln("B: " + c.b + "<br>");
+        document.writeln("C: " + c["c"] + "<br>");
+                        
+
+    </script>
+</body>
+</html>

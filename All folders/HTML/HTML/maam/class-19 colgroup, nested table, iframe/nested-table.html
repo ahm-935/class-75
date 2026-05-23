@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Table</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="10" width="100%">
+        <thead>
+            <tr>
+                <th>Title 1</th>
+                <th>Title 2</th>
+                <th colspan="2">Title 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td style="padding: 0;">
+                    <table border="1" cellspacing="0" cellpadding="10" width="100%">
+                        <tr>
+                            <td bgcolor="#37B8B3">2.1</td>
+                            <td>2.2</td>
+                            <td>2.3</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

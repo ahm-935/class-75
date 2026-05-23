@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <script>
+    /*.    class Trainee{
+            fName = "Shakib";
+            lName = "Al Hasan";
+            fullName() {
+                return this.fName + " " + this.lName;
+            }
+        }
+        let trainee = new Trainee();
+        // console.log(trainee);
+        document.write(trainee.fName);
+        document.write("<br>");
+        document.write(trainee.fullName());
+        document.write("<br>");
+        trainee.fName = "Raju";
+        document.write(trainee.fullName());
+        */
+
+        class Trainee{
+            constructor(_fName, _lName=''){
+                this.fName = _fName;
+                this.lName = _lName;
+            }
+            fullName() {
+                return this.fName + " " + this.lName;
+            }
+        }
+        let traineeFN = prompt("Enter trainee First name");
+        let traineeLN = prompt("Enter trainee Last name");
+        let trainee = new Trainee(traineeFN, traineeLN);
+        // console.log(trainee);
+        document.write(trainee.fName);
+        document.write("<br>");
+        document.write(trainee.fullName());
+        document.write("<br>");
+        // trainee.fName = "Jarif";
+        document.write(trainee.fullName());
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class Student {
+            constructor(_sName, _sMarks=0) {
+                this.Name = _sName;
+                this.Marks = _sMarks;
+            }
+            getInfo() {
+                // return this.sName + " :" + this.sMarks;
+                document.write("Student name : " + this.sName + " <br>" );
+                document.write("Student marks : " + this.sMarks + " <br>" );
+            }
+        }
+        let sName = prompt("Enter student name: ");
+        let sMarks = prompt("Enter student marks: ");
+        let student = new Student(Name, Marks);
+        student.getInfo(Name, Marks);
+    </script>
+</body>
+</html>

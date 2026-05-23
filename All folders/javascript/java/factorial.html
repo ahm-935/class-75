@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    
+<script>
+    let num =parseInt(prompt("Enter a number"));
+    let result = 1;
+    let steps = "";
+    if (num>0){
+        let fact = 1;
+        for(let i = num; i > 0; i--){
+            fact *=i; // fact = fact * i
+            steps += i + " × ";
+        }
+        document.write(steps + " = " +  fact);
+    
+        }
+    else{
+        document.write("Please enter a positive number");}
+
+</script>
+
+</body>
+</html>

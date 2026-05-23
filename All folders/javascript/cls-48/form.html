@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .custom-input {
+            width: 200px;
+            height: 40px;
+        }
+
+        .custom-input::placeholder {
+            color: #000;
+            transition: transform .3s ease;
+        }
+
+        .custom-input:focus::placeholder {
+            transform: translateY(-15px);
+            color: rgb(15, 40, 108);
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- form action="javascript:void(0);" -->
+
+    <!-- form action="javascript:;" -->
+    <form>
+        <label for="fname">FirstName:</label><br>
+        <input type="text" id="fname" name="first_name">
+        <div class="error-message"></div>
+        <br>
+        <label for="lname">LastName:</label><br>
+        <input type="text" id="last_name" name="last_name" value="">
+        <div class="error-message"></div>
+
+        <br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" >
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <div class="error-message error-gender"></div>
+
+        <br>
+        <label for="skills">Skills:</label><br>
+        <input type="checkbox" id="html" name="skills" value="html">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="skills" value="css">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="javascript" name="skills" value="javascript">
+        <label for="js">JS</label><br>
+
+        <label for="address">Address:</label><br>
+        <input class="custom-input" type="text" id="address" name="address" placeholder="Enter your address">
+        <br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <button>Submit</button> <button type="reset">Reset</button>
+
+        <script>
+            // console.log(document.forms[0]);
+            let form = document.forms[0];
+            // console.log(form.first_name.value);
+            // console.log(form.last_name.value);
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                /*    console.log(event); 
+                //     console.log(event); */
+                //     console.log(form.gender.value);
+                //     console.log(form.address.value);
+                //     console.log(form.email.value);
+                //     console.log(form.password.value);
+                let fname = this.first_name;
+                let lname = this.last_name;
+                let gender = this.gender;
+                let address = this.address.value;
+
+
+                let fname_error = fname.nextElementSibling;
+                if (fname.value === '') {
+                    fname_error.innerText = 'First name is required';
+                } else if (fname.value.length < 2 || fname.value.length > 20) {
+                    fname_error.innerText = 'First name must be between 2 and 20 characters long';
+                } else {
+                    fname_error.innerText = '';
+                }
+
+                let lname_error = lname.nextElementSibling;
+                  if (lname.value.length !=='' && (lname.value.length < 2 || lname.value.length > 20)) {
+                      lname_error.innerText = 'Last name is required';
+                  } else if (lname.length < 2 || lname.length > 20) {
+                     lname_error.innerText = 'Last name must be between 2 and 20 characters long';
+                  } else {
+                      lname_error.innerText = '';
+                  } 
+
+                let gender_error = document.querySelector('.error-gender');
+                // console.log(gender.value);
+                if (gender.value === '') {
+                    gender_error.innerText= 'Gender is required';
+                } else {
+                    gender_error.innerText = '';
+                };
+
+                if (fname_error.innerText === '' && lname_error.innerText === '' && gender_error.innerText === '') {
+                   form.submit();
+                   alert('Form submitted successfully');
+                }
+
+            });
+        </script>
+    </form>
+</body>
+
+</html>

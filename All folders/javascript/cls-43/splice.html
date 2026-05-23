@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice Example</title>
+</head>
+
+<body>
+    <script>
+        let arr = ["a", "b", "c", "d", "e"];
+        console.log(arr);
+        // arr.splice(2); // (2->index) removes 2 elements starting from index 2
+        // console.log(arr);
+        // arr.splice(1,2); // (1->index, 2->count) removes 2 elements starting from index 1
+        // console.log(arr);
+        // arr.splice(1, 2, "x"); // (1->index, 2->count, "x"->new element) removes 2 elements starting from index 1 and adds "x" at index 1
+        // console.log(arr);
+        arr.splice(2, 0, "x", "y"); // (2->index, 0->count, "x"->new element, "y"->new element) adds "x" and "y" at index 2
+        console.log(arr);
+    </script>
+
+</body>
+
+</html>

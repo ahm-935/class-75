@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            username;
+            email;
+            #password = "1020304050";
+            constructor(name, email) {
+                this.username = name;
+                this.email = email;
+            }
+            displayUserInfo() {
+                return `
+                Username: ${this.username} <br>
+                Email: ${this.email} <br> 
+                Password: ${this.#password} <br>
+                `;
+            }
+            #displayPassword() {
+                return this.#password;
+            }
+        }
+        class Profile extends User {
+            address;
+            constructor(address, name, email) {
+                super(name, email);
+                this.address = address;
+            }
+        }
+        let profile = new Profile("John", "john@example.com");
+        document.write(profile.password);
+        document.write("<br>");
+
+        let user = new User("John", "john@example.com");
+        document.write(user.email);
+        document.write("<br>");
+        document.write(user.displayUserInfo());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish Clock</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #2951a1, #25bc18);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .clock {
+      color: #fff;
+      font-size: 4em;
+      font-weight: bold;
+      padding: 20px 40px;
+      border: 5px solid #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+      background: rgba(139, 8, 240, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="clock" id="clock"></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+
+      // Add leading zeros
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      document.getElementById("clock").textContent = 
+        `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Update every second
+    setInterval(updateClock, 1000);
+    updateClock(); // initial call
+  </script>
+</body>
+</html>

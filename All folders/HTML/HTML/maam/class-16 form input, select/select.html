@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <form>
+        <label for="">Area</label>
+        <select name="area">
+            <optgroup label="Dhaka">
+                <option>Motijheel</option>
+                <option>Palton</option>
+                <option disabled>Mirpur</option>
+                <option>Uttara</option>
+            </optgroup>
+            <optgroup label="Chittagong">
+                <option selected>Agrabad</option>
+                <option>Muradpur</option>
+            </optgroup>
+            <optgroup label="Sylhet">
+                <option>Srimongol</option>
+            </optgroup>
+        </select>
+        <button>Submit</button>
+    </form>
+
+    <br><br>
+    <form action="">
+        <select name="country_name" multiple>
+            <option disabled selected>-- Select your country --</option>
+            <option value="BD">Bangladesh</option>
+            <option value="US">USA</option>
+            <option value="UK">UK</option>
+            <option value="JP">Japan</option>
+        </select>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

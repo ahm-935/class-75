@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form OOP</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="jobApplicationForm">
+        <label for="name">Applicant Name:</label>
+        <input type="text" id="name" name="name" value="Nahian Ahmed"><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="nahian78@example.com"><br><span class="error" id="emailError"></span>
+        <br><br>
+        
+        <label for="position">Position Applied:</label>
+        <input type="text" id="position" name="position" value="Software Developer"><br><br>
+        <label for="coverLetter">Cover Letter:</label><br>
+        <textarea id="coverLetter" name="coverLetter" rows="5" cols="40">N/A</textarea><br><br>
+        <label for="employmentType">Employment Type:</label><br>
+        <input type="radio" id="fullTime" name="employmentType" value="fullTime">
+        <label for="fullTime">Full-time</label>
+        <input type="radio" id="partTime" name="employmentType" value="partTime">
+        <label for="partTime">Part-time</label>
+        <input type="radio" id="internship" name="employmentType" value="internship">
+        <label for="internship">Internship</label><br><br>
+
+        <label for="skills">Skills:</label><br>
+        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" id="python" name="skills" value="Python">
+        <label for="python">Python</label>
+        <input type="checkbox" id="java" name="skills" value="Java">
+        <label for="java">Java</label>
+        <input type="checkbox" id="csharp" name="skills" value="C#">
+        <label for="csharp">C++</label><br><br>
+
+        <label for="experience">Experience level:</label>
+        <select id="experience" name="experience">
+            <option value="entry">Entry Level</option>
+            <option value="intermediate">Intermediate Level</option>
+            <option value="jnr">Junior Level</option>
+            <option value="mid">Mid Level</option>
+            <option value="senior">Senior Level</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script src="form-oop.js"></script>
+    <script>
+        new DynamicForm('#jobApplicationForm');
+              
+    </script>
+</body>
+
+</html>

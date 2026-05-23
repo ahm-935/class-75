@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic DOM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1 class="heading" id="head" data-user-id="55">Dynamic DOM</h1>
+    <input type="password">
+    <button onclick="show"><i class="fa-regular fa-eye" style="color: rgb(30, 48, 80);"></i>
+        <!-- <i class="fa-solid fa-eye-slash" style="color: rgb(30, 48, 80);"></i> -->
+    </button>
+
+    <script>
+        let h1 = document.querySelector("h1");
+        console.log(h1.getAttribute("id"));
+        h1.setAttribute("id", "new-id");
+        // h1.removeAttribute("id");
+        console.log(h1.hasAttribute("id"));
+        console.log(h1.getAttribute("data-user-id"));
+        console.log(h1.dataset.userId);
+        h1.dataset.userId = 100;
+
+        let input = document.querySelector("input");
+        let icon = document.querySelector("i");
+        input.type = "text";
+        icon.onclick = function () {
+            if (input.getAttribute("type") == "password") {
+                input.setAttribute("type", "text"); input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.setAttribute("type", "password"); input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        };
+
+
+    </script>
+</body>
+
+</html>

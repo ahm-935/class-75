@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(10, 122, 85);
+        }
+
+        /* * {
+            box-sizing: border-box;
+        } */
+        .menu {
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            background-color: slateblue;
+        }
+
+        .menu li {
+            list-style: none;
+            display: inline-block;
+
+        }
+
+
+        .menu a {
+            text-decoration: none;
+            background-color: rgb(5, 79, 38);
+            padding: 10px;
+            color: #fff;
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        .menu>li {
+            position: relative;
+        }
+
+        .menu a:hover {
+            background-color: transparent;
+        }
+
+        .submenu {
+            position: absolute;
+            left: 0;
+            padding-left: 0;
+            display: none;
+
+        }
+
+        /* .submenu li {
+            display: block;
+        } */
+/* 
+        .submenu li a {
+            display: block;
+            width: 80px;
+
+        } */
+
+        .menu>li:hover .submenu {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="">Home |</a></li>
+            <li><a href="">About |</a></li>
+            <li><a href="">Services&triangledown;|</a>
+                <ul class="submenu">
+                    <li><a href="">Web Design</a></li>
+                    <li><a href="">Development</a></li>
+                    <li><a href="">SEO</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact &triangledown;</a>
+                <ul class="submenu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Office</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

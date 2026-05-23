@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout(function, time)
+        setTimeout(() => {
+            console.log('Hello');
+        }, 2000);
+        function hello() {
+            console.log('Hi');
+        }
+        setTimeout(hello, 3000);
+        let timeout = setTimeout(hello, 5000);
+
+        let interval = setInterval(function(){
+            console.log('How are you?');
+        },2000);
+        setTimeout(() => {
+            clearInterval(interval);
+            clearTimeout(timeout);
+        })
+        // setInterval(function, time)
+        setInterval(() => {
+            console.log('How are you?');
+        }, 4000);
+        function hi() {
+            console.log('I am fine. Thanks! How are you?');
+        }
+        setTimeout(hi, 5000);
+       
+    </script>
+</body>
+</html>

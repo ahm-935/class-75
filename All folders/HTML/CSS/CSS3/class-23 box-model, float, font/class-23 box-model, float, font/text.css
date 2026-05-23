@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+
+body {
+    font-family: "Playwrite CU", "Qahiri", "Playwrite AT", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "Playwrite CU";
+    src: url("Playwrite_CU_Guides/PlaywriteCUGuides-Regular.ttf");
+}
+
+div p {
+    margin: 0 0 10px;
+}
+
+div p:nth-child(2) {
+    color: red;
+    font-size: 30px;
+
+    /* text-transform: uppercase/lowercase/capitalize; */
+    text-transform: capitalize;
+}
+
+div p:first-child {
+    font-weight: 900;
+    font-style: italic;
+    text-align: right;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+div p:nth-child(3) {
+    text-align: center;
+}
+
+div p:nth-child(4) {
+    font-family: 'Times New Roman', Times, serif;
+}

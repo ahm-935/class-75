@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = {
+            name: "John",
+            age: 30,
+            phone: "123-456-7890"
+        }
+
+        console.log(obj);
+        console.log(Object.keys(obj)); // Accessing a property
+        console.log(Object.values(obj)); // Accessing a property using bracket notation
+        console.log(Object.entries(obj)); // Accessing all key-value pairs
+
+        let obj2 = {
+            Id: 123,
+            ...obj,
+            address: "Seoul"
+        }
+
+        console.log(obj2);
+        let json = JSON.stringify(obj2); // Convert object to JSON string
+        console.log(json);
+        let obj3 = JSON.parse(json); // Convert JSON string back to object
+        console.log(obj3);
+
+
+    </script>
+
+</body>
+
+</html>

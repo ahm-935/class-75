@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(80, 151, 128);
+            margin-bottom: 10px;
+        }
+        .box:nth-child(1) {
+            background-color: rgb(133, 133, 9);
+            position: static;
+            width: 100%;
+            height: 100px;
+        }
+
+        .box:nth-child(2) {
+            background-color: rgb(241, 241, 201);
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+        }
+
+        .box:nth-child(3) {
+            background-color: rgb(180, 21, 154);
+            height: 50px;
+            width: 40px;
+            position: fixed;
+            bottom: 30px;
+            border-radius: 40px 50px 40px 50px;
+            right: 0px;
+        }
+
+        .box:nth-child(4) {
+            background-color: rgb(122, 5, 70);
+            position: sticky;;
+            height: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box">Sticky</div>
+    <div class="box">&uparrow;</div>
+    <div class="container">
+    <div style="width: 100px;
+    height: 90px;
+    background-color: rgb(115, 123, 196);" class="box">
+        <div style="width: 50px;
+        height: 20px;
+        background-color: rgb(201, 204, 18);
+        position: absolute;
+        top: 5px;
+        right: 5px;">10%0ff</div>
+    </div>
+    <div style="width: 100px;
+    height: 90px;
+    background-color: rgb(115, 123, 196);" class="box">
+        <div style="width: 50px;
+        height: 20px;
+        background-color: rgb(201, 204, 18);
+        position: absolute;
+        top: 5px;
+        right: 5px;">10%0ff</div>
+    </div>
+    <div style="width: 100px;
+    height: 90px;
+    background-color: rgb(115, 123, 196);" class="box">
+        <div style="width: 50px;
+        height: 20px;
+        background-color: rgb(201, 204, 18);
+        position: absolute;
+        top: 5px;
+        right: 5px;">10%0ff</div>
+    </div>
+</div>
+    
+    
+    <div class="box"></div>
+
+
+    <div style="height: 2000px;"></div>
+
+</html>

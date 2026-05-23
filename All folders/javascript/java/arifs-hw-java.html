@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Adult or not
+
+        // alert();
+        // confirm("Are you sure?");
+
+
+        // Class Work
+        // let age = prompt("Enter your age:");
+        // age = parseInt(age);
+        // // document.write(age);
+        // if(age<18){
+        //     document.write("Mini");
+        // }
+        // else if(age>=18) {
+        //     document.write("Adult");
+        // }
+        // else{
+        //     document.write("হিজিবিজি");
+        // }
+
+
+
+
+        // if(age>=18){
+        //     document.write("Adult");
+        // }
+        // else{
+        //     document.write("Minor");
+        // }                       
+
+        // Grade according to marks
+
+        document.write("<br>==========<br>");
+
+        let a = prompt("Enter your marks:");
+        if (a < 0 || a > 100) {
+            document.write("Please enter valid marks" + "<br>");
+        }
+          if (a >= 80 && a <= 100) {
+            a = "A";
+            document.write("A" + "<br>");
+        }
+          else if (a >= 60 && a < 80) {
+            a = "B";
+            document.write("B" + "<br>");
+        }
+          else if (a >= 40 && a < 60) {
+            a = "C";
+            document.write("C" + "<br>");
+        }
+         else if (a < 40 && a >= 0) {
+            a = "Fail";
+            document.write("Fail" + "<br>");
+        }
+          else {
+            a = "Invalid";
+            document.write(" Invalid" + "<br>");
+        }
+
+        //  Greeting according to time
+
+        document.write("<br>==========<br>");
+
+        let time = 10;
+        if (time < 12) {
+            document.write("Good Morning");
+        }
+        else if (time >= 12 && time < 18) {
+            document.write("Good Afternoon");
+        }
+        else if (time >= 18 && time < 24) {
+            document.write("Good Evening");
+        }
+
+
+
+        // Check if number is positive or negative
+        document.write("<br>==========<br>");
+
+        let num = -3;
+        if (num > 0) {
+            document.write("Positive");
+        }
+        else if (num < 0) {
+            document.write("Negative");
+        }
+        else {
+            document.write("Zero");
+        }
+    </script>
+</body>
+
+</html>

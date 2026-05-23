@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <script>
+        let email = prompt("Enter your email", "azmaine76@gmail.com");
+        let emailRegex = /^[a-zA-Z0-9.]{3,30}[@]{1}[a-zA-Z0-9-]{3,20}[.]{1}[a-zA-Z]{2,6}$/;
+        if (emailRegex.test(email)) {
+            document.write("Email is valid");
+        } else {
+            document.write("Email is invalid");
+        }
+        </script>
+</body>
+</html>

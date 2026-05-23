@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-text {
+            color: red;
+        }
+        .bg-aqua {
+            background-color: aqua;
+        }
+        .border {
+            border: 1px solid black;
+        }
+        .green-text {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p class="red-text">This is a paragraph. I</p>
+    <p>This is another paragraph. II</p>
+    <p class="red-text bg-aqua">This is yet another paragraph. III</p>
+    <p class="bg-aqua">This is the last paragraph. IV</p>
+    <button onclick="changeColor()">Click to Change Color</button>
+    <!-- <button onclick="p2.classList.toggle('text-red')">Click to Change Color</button> -->
+    <script>
+        let p2 = document.querySelector("p:nth-of-type(2)");
+        let p3 = document.querySelector("p:nth-of-type(3)");
+        let p4 = document.querySelector("p:nth-of-type(4)");
+        // console.log(p2);
+        p2.classList.add("green-text");
+        p3.classList.remove("bg-aqua");
+        // console.log(p3.classList.contains("green-text"));
+        // p2.classList.toggle("border");
+        // p2.classList.toggle("green-text");
+        function changeColor(){
+           
+            p2.classList.toggle("green-text");
+        }
+        p4.style.color = "blue";
+        p4.style.backgroundColor = "yellow";
+        p4.style.fontSize = "30px";
+        let p = document.querySelectorAll("p");
+        for(let ele of p){
+            ele.style.border = "1px solid purple";
+        }
+
+    </script>
+</body>
+</html>

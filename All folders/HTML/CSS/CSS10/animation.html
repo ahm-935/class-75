@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .box {
+            margin: 0 auto;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* animation-name: box-animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite; */
+            animation: box-animation 4s infinite;
+        }
+
+        @keyframes box-animation {
+
+            /* from{
+                background-color: red;
+            } to{
+                background-color: green;
+            } */
+            0% {
+                background-color: rgb(153, 45, 45);
+                border-radius: 0px;
+            }
+
+            50% {
+                background-color: rgb(38, 136, 38);
+                border-radius: 50px;
+            }
+
+            100% {
+                background-color: red;
+                border-radius: 0px;
+            }
+        }
+
+        .slider {
+            margin-top: 20px;
+            border: 1px solid;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(11, 136, 136);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            animation: slider-animation 4s infinite;
+        }
+
+        @keyframes slider-animation {
+            0% {
+                background-image: url(assets/img/samsung.png);
+            }
+
+            30% {
+                background-image: url(assets/img/iphone-16-20250812163001.jpg);
+            }
+
+            60% {
+                background-image: url(assets/img/img2.jpg);
+            }
+
+            100% {
+                background-image: url(assets/img/Samsung-Mobile-Galaxy-Samsung-Brings-Satellite-Communication-Support-to-Galaxy-Smartphones-Across-the-Globe_Main1.jpg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br>
+    <div class="box"></div>
+    <!-- <br>><br><br><br><br>
+    <div class="box"></div>
+    <br><br><br><br><br>
+    <div class="box"></div>
+    <br>><br><br><br><br>
+    <div class="box"></div>
+    <br><br><br><br><br>
+    <div class="box"></div>
+    <br>><br><br><br><br>
+    <div class="box"></div> -->
+    <div class="slider"></div>
+
+</body>
+
+</html>

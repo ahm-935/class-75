@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Exact match */
+        [class^="div"] {
+        color: red;
+        }
+        /* Start with  */
+        [class^=div]{
+            background-color: green;
+        }
+        /* End With  */
+        [class$=div]{
+            background-color: yellow;
+        }
+        /* Contains  */
+        /* [class*=div]{
+           border: 1px solid black;
+        } */
+        /* div div{
+            color: blue;
+        } */
+        /* direct child */
+        .root > div{
+            border: 1px solid black;
+        }
+        /* Adjacent sibling */
+        .div-first ~ div{
+            background-color: green;
+        }
+        /* Next sibling */
+        .div-first + div{
+            background-color: red;
+        }
+      
+    </style>
+</head>
+<body class="root">
+    <div class="div-first">DIV 1</div>
+    <div class="second-div">div 2</div>
+    <div class="mydivname">div 3</div>
+    <div class="div-">div 4</div>
+    <div>
+        <div>div 5</div>
+        <div>div 6</div>
+        <div>div 7</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let sum = 0;
+let number;
+
+while (true) {
+  
+    let input = prompt("Enter a number (enter a negative number to stop):");
+    
+    
+    number = parseFloat(input);
+
+   
+    if (number < 0) {
+        break;
+    }
+
+    
+    if (!isNaN(number)) {
+        sum += number;
+    } else {
+        alert("Please enter a valid number.");
+    }
+}
+
+
+console.log("Sum of all positive Numbers: " + sum);
+alert("Sum of all positive Numbers: " + sum);
+    </script>
+</body>
+</html>

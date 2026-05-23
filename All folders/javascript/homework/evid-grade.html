@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result grade</title>
+</head>
+<body>
+    <script>
+        let result = parseInt(prompt("Enter your marks: "));
+        if(result>=90 && result<=100){
+            document.write("Result Grade is: A");
+        }
+        else if(result>=80 && result<90){
+            document.write("Result Grade is: B");
+        }
+        else if(result>=70 && result<80){
+            document.write("Result grade is: C");
+        }
+        else if(result>=60 && result<70){
+            document.write("Result Grade is: D");
+        }
+        else if(result>=0 && result<60){
+            document.write("Result Grade is: F");
+        }
+        else{
+            document.write("Invalid Marks" + "<br>" + "Please enter marks between 0 and 100");
+        }
+    </script>
+</body>
+</html>

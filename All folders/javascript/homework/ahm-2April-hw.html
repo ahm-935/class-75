@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getTraineeResult(mid_score, monthly_score, Trainee_Name = "Unknown Trainee") {
+            let Final_score = (mid_score * .2) + (monthly_score * .8);
+          // console.log(Final_score);
+            if (Final_score >= 60){
+                document.write(Trainee_Name + " Final Score is= " + Final_score + ", Result: Pass");
+            }
+            else{
+                document.write(Trainee_Name + " Final Score is= " + Final_score + ", Result: Fail");
+            }
+            document.write( "<br>");
+        }
+        getTraineeResult(45, 30);
+
+    </script>
+</body>
+
+</html>

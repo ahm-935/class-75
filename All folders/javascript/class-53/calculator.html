@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <span id="sign">...</span>
+    <input type="number" id="num2">
+    <span>=</span>
+    <span id="result"></span>
+    <br>
+    <br>
+    <div>
+        <button>+</button>
+        <button>-</button>
+        <button>&times;</button>
+        <button>&divide;</button>
+    </div>
+    <script>
+        class Calculator{
+            num1 = 0;
+            num2 = 0;
+            result = 0;
+            add(_n1,_n2){
+                // this.num1 = _n1;
+                // this.num2 = _n2;
+                this.result = _n1 + _n2;
+                return this.result;
+            }
+            sub(_n1,_n2){
+                this.result = _n1 - _n2;
+                return this.result;
+            }
+            mul(_n1,_n2){
+                this.result = _n1 * _n2;
+                return this.result;
+            }
+            div(_n1,_n2){
+                this.result = _n1 / _n2;
+                return this.result;
+            }
+        }
+        let cal = new Calculator();
+        let btns = document.querySelectorAll("button");
+        btns.forEach((btn)=>{
+            btn.addEventListener("click",function(){
+                console.log(btn);
+                let num1 = Number(document.getElementById("num1").value);
+                let num2 = Number(document.getElementById("num2").value);
+                let result = document.getElementById("result");
+                let btnSign = btn.innerText;
+                if(btnSign == "+"){
+                    result.innerText = cal.add(num1,num2);
+                    document.getElementById("sign").innerText = "+";
+                }else if(btnSign == "×"){
+                    result.innerText = cal.mul(num1,num2);
+                    document.getElementById("sign").innerText = "×";
+                    
+                }else if(btnSign == "-"){
+                    result.innerText = cal.sub(num1,num2);
+                    document.getElementById("sign").innerText = "-";
+                }else if(btnSign == "÷"){
+                    result.innerText = cal.div(num1,num2);
+                    document.getElementById("sign").innerText = "÷";
+                }
+            })
+        })        
+        // document.write(cal.add(10,20));
+        // document.write(cal.add(5,15));
+    </script>
+</body>
+</html>

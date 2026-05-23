@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     // document.querySelector(".head").style.color = "red";
+        //     console.log(document.querySelector(".head"));
+        //     console.log(document.querySelectorAll(".head"));
+        //     let heads = document.querySelectorAll(".head");
+        //     for (let head of heads) {
+        //         head.style.color = "red";
+        //     }
+        // });
+    </script>
+</head>
+<body>
+    <h1 class="head">Asynchronous</h1>
+    <h1 class="head">Asynchronous</h1>
+    <script>
+        async function showData() {
+            let  heads = await document.querySelectorAll(".head");
+            heads.forEach((head,i) => {
+                head.style.color = "green";
+            });
+
+            }
+            showData();
+    </script>
+    
+</body>
+</html>

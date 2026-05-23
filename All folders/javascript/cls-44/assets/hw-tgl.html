@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <style>
+       
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --button-bg: #f0f0f0;
+        }
+
+        
+        [data-theme="dark"] {
+            --bg-color: #1a1a2e;
+            --text-color: #ffffff;
+            --button-bg: #16213e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+       
+        #theme-toggle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--button-bg);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, background-color 0.4s ease;
+        }
+
+        #theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            position: absolute;
+            top: 20%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello! Welcome to  JavaScript</h1>
+
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        ☀️
+    </button>
+
+    <script>
+        let toggleBtn = document.getElementById('theme-toggle');
+        let currentTheme = localStorage.getItem('theme');
+
+        
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'dark') {
+                toggleBtn.innerHTML = '🌙'; 
+            }
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            
+            if (theme === 'dark') {
+                
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleBtn.innerHTML = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                
+                document.documentElement.setAttribute('data-theme', 'dark');
+                toggleBtn.innerHTML = '🌙'; 
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+
+</body>
+</html>

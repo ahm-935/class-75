@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathao Inspired Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="assets/plugins/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/owlcarousel/owl.theme.default.min.css">
+   
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1600x600') no-repeat center center;
+            background-size: cover;
+            /* color: rgb(90, 3, 3); */
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+
+
+
+
+
+        
+   
+        .owl-carousel img {
+            height: 150px;
+        }
+
+        .owl-carousel {
+            position: relative;
+        }
+
+        .owl-carousel .owl-next,
+        .owl-carousel .owl-prev {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(132, 131, 131) !important;
+            color: white !important;
+            font-size: 20px !important;
+            top: 25%;
+        }
+
+        .owl-carousel .owl-prev {
+            left: 0;
+        }
+
+        .owl-carousel .owl-next {
+            right: 0;
+        }
+
+        .owl-dot span {
+            width: 10px !important;
+            height: 10px !important;
+            background-color: rgb(234, 160, 160) !important;
+        }
+
+        .owl-dot.active span {
+            width: 20px !important;
+            background-color: rgb(199, 165, 165) !important;
+        }
+
+
+
+
+
+
+
+
+
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .service-card {
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 30px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><img src="assets/img/Pathao-logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-dark" href="">Earn with Pathao</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="">Help</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center justify-content-center justify-content-space-around">
+        <div class="container text-center d-flex flex-column">
+            <h1>#1 <span style="color: #e83330">SUPER APP</h1></span>
+            <h2><br><span style="font-size: 37px;line-height: 1.35;">OF THE COUNTRY</span></h2>
+            <p class="lead">One app, all services at your fingertips.</p>
+            <a href="#" class="btn btn-danger btn-lg fade-in mt-3"><img src="assets/img/money.png"
+                    alt="">&nbsp;&nbsp;Earn with Pathao &nbsp; <span><i
+                        class="fa-solid fa-arrow-right text-white"></i></span></a>
+            <a href="#" class="btn btn-outline-secondary btn-lg fade-in mt-3"><i class="fa-solid fa-mobile-screen"
+                    style="color: rgb(210, 8, 8);"></i>&nbsp;Download App &nbsp; <i
+                    class="fa-solid fa-arrow-right text-danger"></i></a>
+        </div>
+        <div>
+            <img src="assets/img/Pathao-banner.jpg" width="1200px" alt="banner">
+        </div>
+    </section>
+
+    <section class="fun-facts-section pt100">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-11 col-md-11 col-lg-8">
+                    <div class="fun-facts-inner ext wow fadeInUp" data-wow-duration=".7s">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="fun-facts-info">
+                                    <h2>15 Million+</h2>
+                                    <p>App Downloads</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="fun-facts-info">
+                                    <h2>350 Million+</h2>
+                                    <p>Trips/Orders Served</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="fun-facts-info">
+                                    <h2>10 Million+</h2>
+                                    <p>Lives Impacted</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Set up your HTML -->
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="assets/img/Bangladeshs-Number-1-Super-App-Pathao-348x224.jpg" alt="">
+            <div> Your Content 1</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/Image-01_A.jpg" alt="">
+            <div> Your Content 2</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/Maximize-Your-Savings-with-Pathao-Points-348x224.jpg" alt="">
+            <div> Your Content 3</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/Pathao-Introduces-Pathao-Car-Prime-and-Pathao-Car-Max-348x224.png" alt="">
+            <div> Your Content 4</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/Pathao-Pay-Features.jpeg" alt="">
+            <div> Your Content 5</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/Download-Pathao-App.png" alt="">
+            <div> Your Content 6</div>
+        </div>
+    </div>
+
+   
+
+    
+
+
+
+
+
+    <!-- start safe platform section -->
+    <section class="pt150 safe-platform">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center wow fadeInUp" data-wow-duration=".7s">
+                        <h2 class="mb70">Every Steps of the Way #HereWithYou!</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="safe-image-wrapper wow fadeInUp" data-wow-duration=".7s">
+                    <div class="safe-insurance-image">
+                        <img src="https://pathao.com/wp-content/themes/webpathao/assets/images/insure-badge-v2.png"
+                            alt="insurance image">
+                    </div>
+                    <div class="safe-border-wrapper">
+                        <div class="safe-border-middle">
+                            <div class="safe-border-inner">
+                                <div class="safe-image-box-part">
+                                    <div class="safe-image-box order-lg-1">
+                                        <img width="484" height="448"
+                                            src="https://pathao.com/wp-content/uploads/2018/12/Image-01_A.jpg"
+                                            caption="Moving Safely with Pathao. "
+                                            description="Keep on moving safely with Pathao. " title="Moving Safely">
+                                    </div>
+                                    <div class="safe-image-box order-lg-2">
+                                        <img width="666" height="448"
+                                            src="https://pathao.com/wp-content/uploads/2018/12/Image-02_A.jpg"
+                                            caption="Moving safely with Pathao"
+                                            description="Safe, comfortable and convenience with Pathao cars.  "
+                                            title="Moving safely">
+                                    </div>
+                                    <div class="safe-image-box order-lg-3">
+                                        <img width="846" height="448"
+                                            src="https://pathao.com/wp-content/uploads/2018/12/Image-03_A.jpg"
+                                            caption="Moving safely with pathao."
+                                            description="moving safely with pathao cars with highly professional captains. "
+                                            title="Moving safely">
+                                    </div>
+
+                                    <div class="safe-image-box order-lg-5">
+                                        <img width="484" height="448"
+                                            src="https://pathao.com/wp-content/uploads/2018/12/Pathao-Pay-Features.jpeg"
+                                            alt="Pathao Pay Features" title="Pathao Pay Features">
+                                    </div>
+                                    <div class="safe-image-box order-lg-6">
+                                        <img width="666" height="448"
+                                            src="https://pathao.com/wp-content/uploads/2018/12/Image-06_A.jpg" caption="Safest platform 
+Moving Bangladesh. " title="Moving Bangladesh">
+                                    </div>
+                                    <div class="safe-image-box order-lg-4">
+                                        <img width="846" height="448"
+                                            src="https://pathao.com/wp-content/uploads/2018/12/Image-04_A.jpg"
+                                            caption="safest delivery with pathao" title="Secure delivery">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="safe-content-wrapper pb75">
+                        <div class="row">
+                            <!-- <div class="col-12 col-md-6"> -->
+                                <!-- <div class="safe-content">
+                                    <h3>The Safest Platform</h3>
+                                    <p>We care about your safety. And to ensure it, we’ve introduced safety coverage for
+                                        all of our users, rides &amp; captains. Your safety is our first priority.</p>
+                                    <a class="btn-trans" href="https://pathao.com/blog/safety-features/">Read More <i
+                                            class="btn-arrow-right"></i></a>
+                                </div> -->
+                            <!-- </div> -->
+                            <!-- <div class="col-12 col-md-6">
+                                <div class="safe-content">
+                                    <h3>We Care About You</h3>
+                                    <p>We believe in providing safety and support. Pathao is the only platform with a
+                                        rapid response team, call centre support, safety coverage, live location share,
+                                        and more! #HereWithYou every step of the way.</p>
+                                    <a class="btn-trans" href="https://pathao.com/blog/safety-features/">Read More <i
+                                            class="btn-arrow-right"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="d-flex align-items-center justify-content-center justify-content-space-around">
+                <div class="card" style="width: 18rem;">
+                    <h3>The Safest Platform</h3>
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="text-danger">Read More &rightarrow;<i class="btn-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <h3>We Care About You</h3>
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="text-danger">Read More &rightarrow;<i class="btn-arrow-right"></i></a>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </section>
+
+
+
+   
+
+
+    <!-- start earn section -->
+    <section class="pt75 pb150 earn-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2 class="mb20  wow fadeInUp" data-wow-duration=".7s">Earn with your car, bike or bicycle</h2>
+                        <p class="wow fadeInUp" data-wow-duration=".7s">Become a captain, rider or foodman on the
+                            highest earning platform!</p>
+                        <a href="/earn-with-bike/" class="btn-solid btn-solid-link wow fadeInUp"
+                            data-wow-duration=".7s">Start Earning <i class="btn-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div><img src="assets/img/Pathao-ecosystem.jpg" width="100%" alt=""></div>
+        <!-- <div class="earn-illustration bg-image wow fadeInUp" data-wow-duration=".7s"
+            style="background-image: url(https://pathao.com/wp-content/uploads/2018/12/Pathao-ecosystem.jpg);"></div> -->
+    </section>
+    <!-- end earn section -->
+
+
+    <!-- start download section -->
+    <section class="pt30 download-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="download-box">
+                        <div class="download-info">
+                            <div class="download-information">
+                                <h3>Download the app</h3>
+                                <p><span style="font-weight: 400">Download now &amp; avail all of our services through
+                                        the app</span></p>
+                            </div>
+                            <div class="download-button">
+                                <h4>Pathao User App</h4><a href="https://pathao.go.link/android" target="_blank"><img
+                                        width="183" height="55"
+                                        src="https://pathao.com/wp-content/uploads/2018/12/Google-Play-ds.png"
+                                        title="Google-Play-ds"></a><a href="https://pathao.go.link/ios"
+                                    target="_blank"><img width="183" height="55"
+                                        src="https://pathao.com/wp-content/uploads/2018/12/App-Store-ds.png"
+                                        title="App-Store-ds"></a>
+                            </div>
+                            <div class="download-button">
+                                <h4>Pathao Drive App</h4><a
+                                    href="https://play.google.com/store/apps/details?id=com.pathao.driver"
+                                    target="_blank"><img width="183" height="55"
+                                        src="https://pathao.com/wp-content/uploads/2018/12/Google-Play-ds.png"
+                                        title="Google-Play-ds"></a>
+                            </div>
+                        </div>
+                        <div class="app-mockup download-img bg-image">
+                            <img width="875" height="828" src="assets/img/Download-Pathao-App.png"
+                                alt="Download Pathao App" title="Download Pathao App">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end download section -->
+
+
+
+    <!-- Services -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Ride</h5>
+                            <p class="card-text">Book a bike or car ride instantly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Food</h5>
+                            <p class="card-text">Order from your favorite restaurants.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Parcel</h5>
+                            <p class="card-text">Send packages quickly and securely.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Pathao Inspired Design. All rights reserved.</p>
+        </div>
+    </footer> -->
+    <footer>
+        <section class="footer-section d-flex">
+            <hr style="margin: 0; padding: 0; border: none; border-bottom: 3px solid #ccc;">
+            <div class="footer-menu">
+                <div>
+
+                    <ul>
+                        <li> &nbsp;&nbsp; <h4>Platform</h4>
+                        </li>
+                        <li> <a href="#all-bd">Pathao Bike</a></li>
+                        <li><a href="">Pathao Car</a></li>
+                        <li><a href="#world">Pathao Food</a></li>
+                        <li><a href="">Pathao Shop</a></li>
+                        <li><a href="">Patahao Parcel</a></li>
+                        <li><a href="">Pathao Courier</a></li>
+                        <li><a href="">Pathao Rentals</a></li>
+                        <li><a href="">Pathao Pay</a></li>
+                        <li><a href="">Pathao Maps</a></li>
+                        <br><br>
+                    </ul>
+                </div>
+                <div>
+
+                    <ul>
+                        <li>
+                            <h4>Earn</h4>
+                        </li>
+                        <li><a href="">Earn With Bike</a></li>
+                        <li><a href="">Earn With Car</a></li>
+                        <li><a href="">Earn With Cycle</a></li>
+
+                        <br><br><br><br><br>
+                    </ul>
+                </div>
+                <div>
+
+                    <ul>
+                        <li>
+                            <h4>Merchant</h4>
+                        </li>
+                        <li><a href="">Courier Merchantsign Up</a></li>
+                        <li><a href="">Courier Merchant Log In</a></li>
+                        <li><a href="">Car Admiral Login</a></li>
+                        <li><a href="">Resto Merchant Sign Up</a></li>
+                        <li><a href="">Resto Merchant Login</a></li>
+                        <br><br><br><br><br>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h4>Help</h4>
+                        </li>
+                        <li><a href="">Walk in Support Center</a></li>
+                        <li><a href="">User Support</a></li>
+                        <li><a href="">Rider Support</a></li>
+                        <li><a href="">Merchant Support</a></li>
+                        <li><a href="">Helpline 09678100800</a></li>
+                        <br><br><br><br><br>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr style="margin: 0; padding: 0; border: none; border-bottom: 3px solid #ccc;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#"><img src="assets/img/Pathao-logo.svg" alt=""></a>
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="form.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="owl.html">Press</a></li>
+                        <li class="nav-item"><a class="nav-link" href="table.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="table.html">Safety</a></li>
+                        <li class="nav-item"><a class="nav-link" href="table.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="copyright">
+            <section>
+                <br><br> <br>
+                <div>
+                    <a href="https://apps.apple.com/us/app/bdnews24-com/id560835088"><img
+                            src="assets/img/Google-Play-footer-.png" height="50px" alt="app-store"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.bdnews24.app&hl=en"><img
+                            src="assets/img/App-Store-footer-.png" height="50px" alt="google-play-store"></a>
+                </div><br><br>
+            </section>
+            <hr style="margin: 0; padding: 0; border: none; border-bottom: 3px solid #ccc;">
+            <div class="copyright text-center py-2">
+                <p>Copyright &copy; 2026 All rights reserved</p>
+            </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+      <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            dots: true,
+            margin: 20,
+            nav: true,
+            autoplay: true,
+            autoWidth: true,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                992: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
