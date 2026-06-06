@@ -7,7 +7,10 @@ where p.manufacturer_id = m.id
 ";
 $result = $db->query($sql);
 $rows = $result->fetch_all(MYSQLI_ASSOC);
-// print_r($rows);
+
+$result_view = $db->query("select * from vw_product");
+$rows_view = $result_view->fetch_all(MYSQLI_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +26,33 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
             <li><a href="products.php">Products</a></li>
         </ul>
     </nav>
-    <h2>Product List</h2>
+    <div style="display: flex; gap: 50px;">
+        <div>
+            <h1>View Product List</h1>
+            <table border="1" cellpadding="10" cellspacing="0" width="50%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Manufacturer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($rows_view as $items) :?>
+                        <tr>
+                            <td><?=  $items['id'];?></td>
+                            <td><?=  $items['name'];?></td>
+                            <td><?=  $items['price'];?></td>
+                            <td><?=  $items['manufacturer_name'];?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    <div>
+    <h1>Product List</h1>
     <table border="1" cellpadding="10" cellspacing="0" width="550">
         <thead>
             <tr>
@@ -44,5 +73,8 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                 </tr>
                 <?php endforeach; ?>
         </tbody>
+    </table>
+    </div>
+
 </body>
 </html>

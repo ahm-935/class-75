@@ -6,6 +6,10 @@ if(isset($_POST['add_mfg'])) {
     $contact_no = $_POST['contact_no'];
     $db->query("call addManufacturer('$name', '$address', '$contact_no')");
 }
+if(isset($_POST['delete_mfg'])) {
+    $manufacturer_id = $_POST['dlt_id'];
+    $db->query("delete from manufacturer where id = $manufacturer_id");
+}
 
 $sql = "select * from manufacturer order by id desc";
 $result = $db->query($sql);
@@ -57,7 +61,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                     <td><?=  $items['contact_no'];?></td>
                     <td>
                         <form action="manufacturer.php" method="POST">
-                            <input type="hidden" name="manufacturer_id" value="<?= $items['id'];?>">
+                            <input type="hidden" name="dlt_id" value="<?= $items['id'];?>">
                             <button type="submit" name="delete_mfg">Delete</button>
                         </form>
                     </td>

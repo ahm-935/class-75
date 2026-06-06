@@ -32,3 +32,15 @@ BEGIN
     insert into manufacturer(name, address, contact_no) values(pname, paddress, pcontact_no);
 END //
 delimiter ;
+
+drop view if exists vw_product;
+create view vw_product as
+select p.id, p.name, p.price, m.name as manufacturer_name, m.address, m.contact_no
+from products p, manufacturer m
+where p.manufacturer_id = m.id and p.price > 5000;
+
+drop trigger if exists delete_mfg;
+create trigger delete_mfg
+after delete on manufacturer
+for each row
+delete from products where manufacturer_id = old.id;
