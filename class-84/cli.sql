@@ -27,7 +27,7 @@ BEGIN
 END //
 delimiter ;
 
-call createManufacturer("Apple", "USA");
+-- call createManufacturer("Apple", "USA");
 
 drop view if exists vw_product_list;
 create view vw_product_list as

@@ -81,6 +81,14 @@ if ($result) {
                                 <td>{$item['address']}</td>
                                 <td>" . ($item['is_active'] ? "Active" : "Inactive") . "</td>
                                 <td>
+                                    <form method='GET' action='manufacturer-details.php'>
+                                        <input type='hidden' name='id' value='{$item['id']}'>
+                                        <button type='submit'>Details</button>
+                                    </form>
+                                    <form method='GET' action='manufac-edit.php'>
+                                        <input type='hidden' name='id' value='{$item['id']}'>
+                                        <button type='submit'>Edit</button>
+                                    </form>
                                     <form method='POST'>
                                         <input type='hidden' name='delete_id' value='{$item['id']}'>
                                         <button type='submit'>Delete</button>

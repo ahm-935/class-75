@@ -59,12 +59,21 @@ create table  if not exists brand_logs (
     time timestamp
 );
 
-drop trigger if exists remove_brand;
-create trigger if not exists remove_brand
-after delete on brands and products
+drop trigger if exists remove_product;
+create trigger if not exists remove_product
+after delete on brands
 for each row
-insert into brand_logs(brand_id, status, time)
-values(old.id, "Deleted", now());
+delete from products where brand_id = old.id;
+
 delete from brands where id = 3;
-select * from brand_logs;
-delete from products where brand_id = 3;
+
+drop trigger if exists modify_category;
+create trigger if not exists modify_category
+after update on categories
+for each row
+update products set is_active = 0
+where category_id = old.id;
+
+update categories set name = "Refrigerators" where id = 1;
+
+
