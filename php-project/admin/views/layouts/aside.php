@@ -39,7 +39,7 @@
                         data-accordion="false"
                         id="navigation">
                         <li class="nav-item">
-                            <a href="index.php" class="nav-link">
+                            <a href="dashboard" class="nav-link">
                                 <i class="fa-regular fa-house"></i>
                                 <p>
                                     Home
@@ -47,7 +47,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="form.php" class="nav-link">
+                            <a href="form" class="nav-link">
                                 <i class="fa-brands fa-wpforms"></i>
                                 <p>
                                     Forms

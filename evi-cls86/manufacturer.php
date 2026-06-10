@@ -68,5 +68,6 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                 </tr>
                 <?php endforeach; ?>
         </tbody>
+    </table>
 </body>
 </html>
