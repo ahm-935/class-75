@@ -11,12 +11,6 @@ if (isset($_GET['page'])) {
     else if($page == 'table' || $page == 'table.php'){
         include_once 'views/pages/table.php';
     }
-    else if($page == 'users'){
-        include_once 'views/pages/users/manage.php';
-    }
-    else if($page == 'create-user'){
-        include_once 'views/pages/users/create.php';
-    }
     else{
         include_once('views/pages/dashboard.php');
     } 
