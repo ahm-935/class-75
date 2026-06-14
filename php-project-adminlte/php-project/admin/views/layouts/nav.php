@@ -10,7 +10,7 @@
                     </li>
 
                     <li class="nav-item d-none d-md-block">
-                        <a href="<?php echo BASE_URL_ADMIN; ?>index.html" class="nav-link">
+                        <a href="<?php echo BASE_URL_ADMIN; ?>index" class="nav-link">
                             <i class="bi bi-grid-1x2 me-1" aria-hidden="true"></i>
                             Live preview
                         </a>

@@ -39,7 +39,7 @@
                         data-accordion="false"
                         id="navigation">
                         <li class="nav-item">
-                            <a href="index.php" class="nav-link">
+                            <a href="index" class="nav-link">
                                 <i class="fa-regular fa-house"></i>
                                 <p>
                                     Home
@@ -47,7 +47,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="form.php" class="nav-link">
+                            <a href="form" class="nav-link">
                                 <i class="fa-brands fa-wpforms"></i>
                                 <p>
                                     POS
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="table.php" class="nav-link">
+                            <a href="table" class="nav-link">
                                 <i class="nav-icon bi bi-table"></i>
                                 <p>
                                     Products
@@ -63,7 +63,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="table" class="nav-link">
                                 <i class="fa-solid fa-box-archive"></i>
                                 <p>
                                     Orders
@@ -76,32 +76,12 @@
                                 <i class="nav-icon bi bi-speedometer"></i>
                                 <p>
                                     Order Status
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                    
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>index.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Dashboard v1</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>index2.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Dashboard v2</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>index3.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Dashboard v3</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo BASE_URL_ADMIN; ?>generate/theme.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-palette"></i>
                                 <p>Payment Methods</p>
                             </a>
@@ -111,100 +91,20 @@
                                 <i class="nav-icon bi bi-box-seam-fill"></i>
                                 <p>
                                     Users
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>widgets/small-box.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Small Box</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>widgets/info-box.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>info Box</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>widgets/cards.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Cards</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
 
                         <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                            <a href="form" class="nav-link active">
                                 <i class="nav-icon bi bi-pencil-square"></i>
                                 <p>
                                     Forms
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>forms/elements.html" class="nav-link active">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Elements</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>forms/layout.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Layout</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>forms/validation.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Validation</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo BASE_URL_ADMIN; ?>forms/wizard.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Wizard</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle-fill"></i>
-                                <p>Level 1</p>
-                            </a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle-fill"></i>
-                                <p>Level 1</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-header">LABELS</li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle text-danger"></i>
-                                <p class="text">Important</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle text-warning"></i>
-                                <p>Warning</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle text-info"></i>
-                                <p>Informational</p>
-                            </a>
-                        </li>
+                       
                     </ul>
                     <!--end::Sidebar Menu-->
                 </nav>
