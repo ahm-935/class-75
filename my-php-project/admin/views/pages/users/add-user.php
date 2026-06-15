@@ -7,25 +7,26 @@ $roles = Role::readAll();
 // print_r($roles);
 // echo '</pre>';
 
-if (isset($_POST['btn_submit'])) {
-    $name             = $_POST['name'];
-    $email            = $_POST['email'];
-    $role_id          = $_POST['role_id'];
-    $password         = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-
-    if ($password == $confirm_password) {
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $user = new User(null, $name, $email, $role_id, $password);
-        $res = $user->create();
-        if ($res === true) {
-            $msg =  "User created successfully.";
-        } else {
-            $msg = $res;
-        }
-    } else {
-        $msg = "Passwords do not match.";
+if(isset($_POST['btn_submit'])){
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $role_id = $_POST['role_id'];
+  $pass = $_POST['pass'];
+  $conf_pass = $_POST['conf_pass'];
+  // $msg = $name . " " . $email . " " . $role_id . " " . $pass . " " . $conf_pass;
+  if($pass == $conf_pass){
+    $pass = password_hash($pass, PASSWORD_DEFAULT);
+    $user = new User(null, $name, $email, $role_id, $pass);
+    $res = $user->create();
+    if($res === true){
+      $msg = "User created successfully";
+      
+    }else{
+      $msg = $res;
     }
+  }else{
+    $msg = "Password doesn't match";
+  }
 }
 ?>
 
@@ -50,7 +51,7 @@ if (isset($_POST['btn_submit'])) {
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <a class="btn btn-primary" href="users"><i class="fa fa-arrow-left"></i>Back</a>
+        <a href="users" class="btn btn-sm btn-dark">&leftarrow; Back</a>
         <div class="row">
           <div class="col-12">
             <h4><?= $msg ?? "" ?></h4>
@@ -69,8 +70,8 @@ if (isset($_POST['btn_submit'])) {
                   <div class="form-group">
                     <label>Role</label>
                     <select class="form-control" name="role_id">
-                        <?php foreach ($roles as $item) { ?>
-                      <option value="<?= $item['id'] ?>"><?= $item['name'] ?></option>
+                      <?php foreach($roles as $item) { ?>
+                      <option value="<?= $item['id']; ?>"><?= $item['name']; ?></option>
                       <?php } ?>
                     </select>
                   </div>

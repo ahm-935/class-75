@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="table" class="nav-link">
+                            <a href="products" class="nav-link">
                                 <i class="nav-icon bi bi-table"></i>
                                 <p>
                                     Products
