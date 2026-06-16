@@ -53,7 +53,10 @@ class Product {
     }
     static public function readAll() {
         global $db;
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT p.id, p.name, 
+        p.price, p.quantity,p.image, b.name as brand, 
+        c.name as category, p.is_inactive FROM products p, categories c, brands b 
+        WHERE p.category_id = c.id AND p.brand_id = b.id"; 
         $result = $db->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);      
     }

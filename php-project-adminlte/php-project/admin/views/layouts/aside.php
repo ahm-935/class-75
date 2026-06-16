@@ -47,7 +47,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="form" class="nav-link">
+                            <a href="pos" class="nav-link">
                                 <i class="fa-brands fa-wpforms"></i>
                                 <p>
                                     POS

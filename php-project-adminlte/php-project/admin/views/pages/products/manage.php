@@ -1,5 +1,5 @@
  <?php
-require_once 'models/brand.class.php';
+require_once 'models/product.class.php';
 
 if (isset($_POST['delete_id'])) {
     $id = $_POST['delete_id'];
@@ -12,7 +12,7 @@ if (isset($_POST['delete_id'])) {
     }
 }
 
-$rows = Brand::readAll();
+$rows = Product::readAll();
 // echo '<pre>';
 // print_r($rows);
 // echo '</pre>';
@@ -63,7 +63,24 @@ $rows = Brand::readAll();
                         </tr>
                       </thead>
                       <tbody>
-                        
+                        <?php foreach ($rows as $item) { ?>
+                        <tr>
+                          <td><?= $item['id'] ;?></td>
+                          <td><?= $item['name'] ;?></td>
+                          <td><img src="<?=  $item['image'] ?>" width="50px"></td>
+                          <td><?= $item['price'] ;?></td>
+                          <td><?= $item['quantity'] ;?></td>
+                          <td><?= $item['brand'] ;?></td>
+                          <td><?= $item['category'] ;?></td>
+                          <td><?= $item['is_inactive'] == 1 ? "Inactive" : "Active"; ?></td>
+                          <td>
+                            <form action="" method="POST">
+                              <input type="hidden" name="delete_id" value="<?= $item['id'] ;?>">
+                              <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                          </td>
+                        </tr>
+                        <?php } ?>
                       </tbody>
                     </table>
                 </div>
