@@ -26,6 +26,12 @@
       </a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="rider-items">
+        <span class="icon-bg"><i class="mdi mdi-format-list-bulleted menu-icon"></i></span>
+        <span class="menu-title">Rider Items</span>
+      </a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="shipments">
         <span class="icon-bg"><i class="mdi mdi-crosshairs-gps menu-icon"></i></span>
         <span class="menu-title">Shipments</span>
@@ -46,8 +52,8 @@
       <div class="collapse" id="auth">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item"> <a class="nav-link" href="../../pages/samples/blank-page.html"> Blank Page </a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
+          <li class="nav-item"> <a class="nav-link" href="views/pages/login.php"> Login </a></li>
+          <li class="nav-item"> <a class="nav-link" href="views/pages/register.php"> Register </a></li>
           <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
           <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
         </ul>

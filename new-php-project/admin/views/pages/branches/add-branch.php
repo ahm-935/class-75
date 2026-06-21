@@ -1,70 +1,77 @@
+<?php
+require_once 'models/branch.class.php';
 
+if (isset($_POST['btn_submit'])) {
+    $branch_name  = $_POST['branch_name'];
+    $manager_name = $_POST['manager_name'];
+    $email        = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
+    $location     = $_POST['location'];
+    $status       = $_POST['status'];
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Add Branch</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Users</li>
-            </ol>
+    // অবজেক্ট তৈরি এবং প্যারামিটার পাঠানো
+    $branch = new Branch(null, $branch_name, $manager_name, $email, $phone_number, $location, $status);
+    $res = $branch->create();
+    
+    if ($res === true) {
+        $msg = "Branch created successfully.";
+    } else {
+        $msg = "Error: " . $res;
+    }
+}
+?>
+ 
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title"> Add New Branch </h3>
+    </div>
+    <div class="row">
+      <div class="col-12 grid-margin stretch-card">
+        <?php if(isset($msg)): ?>
+            <div class="alert alert-dark"><?= $msg ?></div>
+        <?php endif; ?>
+        
+        <div class="card">
+          <div class="card-body">
+            <p class="card-description"> <a href="branches"><button class="btn btn-dark">&larr; Back to List</button></a> </p>
+            
+            <form class="forms-sample" method="POST">
+              <div class="form-group">
+                <label>Branch Name</label>
+                <input type="text" class="form-control" name="branch_name" placeholder="Enter Branch Name" required>
+              </div>
+              <div class="form-group">
+                <label>Manager Name</label>
+                <input type="text" class="form-control" name="manager_name" placeholder="Enter Manager Name" required>
+              </div>
+              <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control" name="email" placeholder="Enter Email" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" name="phone_number" placeholder="Enter Phone Number" required>
+              </div>
+              <div class="form-group">
+                <label>Location</label>
+                <input type="text" class="form-control" name="location" placeholder="Enter Location" required>
+              </div>
+              <div class="form-group">
+                <label>Status</label>
+                <select class="form-control" name="status">
+                  <option value="Pending">Pending</option>
+                  <option value="Operating">Operating</option>
+                  <option value="Closed">Closed</option>
+                </select>
+              </div>
+
+              <button type="submit" name="btn_submit" class="btn btn-success mr-2">Submit</button>
+            </form>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <a href="branches" class="btn btn-sm btn-dark">&leftarrow; Back</a>
-        <div class="row">
-          <div class="col-12">
-            <h4><?= $msg ?? "" ?></h4>
-            <div class="card card-primary">
-              <!-- form start -->
-              <?php if(isset($not_found)): ?>
-               <h5>Data not found.</h5>
-              <?php else: ?>
-              <form action="" method="POST">
-                <input type="hidden" value="" name="id">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label>Branch Name</label>
-                    <input type="text" class="form-control" name="branch_name" placeholder="Enter branch name" value="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Manager Name</label>
-                    <input type="text" class="form-control" name="manager_name" placeholder="Enter manager name" value="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter email address" value="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Phone Number</label>
-                    <input type="number" class="form-control" name="phone" placeholder="Enter phone number" value="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Location</label>
-                    <input type="text" class="form-control" name="location" placeholder="Enter location" value="">
-                  </div>
-                </div>
-                <!-- /.card-body --> 
-                <div class="card-footer">
-                  <button type="submit" name="btn_submit" class="btn btn-primary">Add Branch </button>
-                </div>
-              </form>
-              <?php endif; ?>
-            </div>
-            <!-- /.card -->
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+      </div>
+    </div>
   </div>
+  <?php include('views/layouts/footer.php'); ?>
+</div>

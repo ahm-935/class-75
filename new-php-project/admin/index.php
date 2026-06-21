@@ -1,3 +1,7 @@
+<?php
+include_once 'config/base.php';
+include_once 'config/db.php';
+?>
 <?php include('views/layouts/head.php'); ?>
     <div class="container-scroller">
       <!-- partial:partials/_navbar.html -->
