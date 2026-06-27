@@ -9,7 +9,6 @@ $shipments = array_filter($all_parcels, function($parcel) {
     return $parcel['status'] === 'In Transit';
 });
 ?>
-
 <div class="main-panel">
   <div class="content-wrapper">
     <div class="page-header">
@@ -76,7 +75,6 @@ $shipments = array_filter($all_parcels, function($parcel) {
                 </tbody>
               </table>
             </div>
-
           </div>
         </div>
       </div>
