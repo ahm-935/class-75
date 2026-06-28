@@ -5,6 +5,12 @@ if (isset($_GET['page'])) {
     if ($page == 'dashboard') {
         include_once('views/pages/dashboard.php');
     }
+     elseif ($page == 'login') {
+        include_once('views/pages/auth/login.php');
+    }
+     elseif ($page == 'register') {
+        include_once('views/pages/auth/register.php');
+    }
      elseif ($page == 'users') {
         include_once('views/pages/users/manage.php');
     }

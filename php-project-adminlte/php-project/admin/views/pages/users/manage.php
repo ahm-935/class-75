@@ -1,118 +1,118 @@
  <?php
-require_once 'models/user.class.php';
+  require_once 'models/user.class.php';
 
-if (isset($_POST['delete_id'])) {
+  if (isset($_POST['delete_id'])) {
     $id = $_POST['delete_id'];
     // echo $id;
-    $res = User::delete($id);   
+    $res = User::delete($id);
     if ($res === true) {
-        $msg =  "<h4 class='text-success'>User deleted successfully.</h4>";
+      $msg =  "<h4 class='text-success'>User deleted successfully.</h4>";
     } else {
-        $msg = $res;
+      $msg = $res;
     }
-}
-$limit = 2;
-$pages = User::getPageNo(2);
-// print_r($pages);
-$rows = User::readAll(1, $limit);
-// echo '<pre>';
-// print_r($rows);
-// echo '</pre>';
-if(isset($_GET['pg'])) {
+  }
+  $limit = 2;
+  $pages = User::getPageNo(2);
+  // print_r($pages);
+  $rows = User::readAll(1, $limit);
+  // echo '<pre>';
+  // print_r($rows);
+  // echo '</pre>';
+  if (isset($_GET['pg'])) {
     $pg = $_GET['pg'];
     // echo "<h1>Page No: $pg</h1>";
     $rows = User::readAll($pg, $limit);
-}
- ?>
+  }
+  ?>
  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Users</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Users</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
+   <!-- Content Header (Page header) -->
+   <section class="content-header">
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1>Users</h1>
+         </div>
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="#">Home</a></li>
+             <li class="breadcrumb-item active">Users</li>
+           </ol>
+         </div>
+       </div>
+     </div><!-- /.container-fluid -->
+   </section>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <a href="create-user" class="btn btn-sm btn-primary">Create User</a>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <div class="table-responsive">
-                    <?php echo $msg ?? ""; ?>
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <?php foreach($rows as $item){?>
-                        <tr>
-                          <td><?= $item['id'] ?></td>
-                          <td><?= $item['name'] ?></td>
-                          <td><?= $item['email'] ?></td>
-                          <td>
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-default"><i class="fa fa-eye text-primary"></i></button>
-                              <a href="edit?id=<?= $item['id'] ?>" class="btn btn-sm btn-default"><i class="fa fa-edit text-warning"></i></a>
+   <!-- Main content -->
+   <section class="content">
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col-12">
+           <div class="card">
+             <div class="card-header">
+               <a href="create-user" class="btn btn-sm btn-primary">Create User</a>
+             </div>
+             <!-- /.card-header -->
+             <div class="card-body p-0">
+               <div class="table-responsive">
+                 <?php echo $msg ?? ""; ?>
+                 <table class="table table-bordered">
+                   <thead>
+                     <tr>
+                       <th>ID</th>
+                       <th>Name</th>
+                       <th>Email</th>
+                       <th>Actions</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <?php foreach ($rows as $item) { ?>
+                       <tr>
+                         <td><?= $item['id'] ?></td>
+                         <td><?= $item['name'] ?></td>
+                         <td><?= $item['email'] ?></td>
+                         <td>
+                           <div class="btn-group">
+                             <button type="button" class="btn btn-sm btn-default"><i class="fa fa-eye text-primary"></i></button>
+                             <a href="edit?id=<?= $item['id'] ?>" class="btn btn-sm btn-default"><i class="fa fa-edit text-warning"></i></a>
                              <form action="" method="POST">
-                                <input type="hidden" name="delete_id" value="<?= $item['id'] ?>">
-                                <button type="submit" class="btn btn-sm btn-default"><i class="fa fa-trash text-danger"></i></button>
-                              </form>
-                            </div>
-                          </td>
-                        </tr>
-                        <?php } ?>
-                      </tbody>
-                    </table>
-                </div>
-              </div>
-              <!-- /.card-body -->
-               <div class="card-footer clearfix">
-                    <ul class="pagination pagination-sm m-0 float-end">
-                      <li class="page-item <?= $pg <= 1 ? 'disabled' : '' ?>">
-                        <a class="page-link" href="users?pg=1">First Page</a>
-                      </li>
-                      <li class="page-item <?= $pg <= 1 ? 'disabled' : '' ?>">
-                        <a class="page-link" href="users?pg=<?= $pg - 1 ?>">«Prev</a>
-                      </li>
-                      <?php for ($i=1; $i <= $pages; $i++) : ?>
-                      <li class="page-item">
-                        <a class="page-link" href="users?pg=<?= $i ?>"><?= $i; ?></a>
-                      </li>
-                      <?php endfor; ?>
-                      <li class="page-item <?= $pg == $pages ? 'disabled' : '' ?>">
-                        <a class="page-link" href="users?pg=<?= $pg + 1 ?>">Next»</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="users?pg=<?= $pages ?>">Last page</a>
-                      </li>
-                    </ul>
-                  </div>
-            </div>
-            <!-- /.card -->
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
+                               <input type="hidden" name="delete_id" value="<?= $item['id'] ?>">
+                               <button type="submit" class="btn btn-sm btn-default"><i class="fa fa-trash text-danger"></i></button>
+                             </form>
+                           </div>
+                         </td>
+                       </tr>
+                     <?php } ?>
+                   </tbody>
+                 </table>
+               </div>
+             </div>
+             <!-- /.card-body -->
+             <div class="card-footer clearfix">
+               <ul class="pagination pagination-sm m-0 float-end">
+                 <li class="page-item <?= $pg <= 1 ? 'disabled' : '' ?>">
+                   <a class="page-link" href="users?pg=1">First Page</a>
+                 </li>
+                 <li class="page-item <?= $pg <= 1 ? 'disabled' : '' ?>">
+                   <a class="page-link" href="users?pg=<?= $pg - 1 ?>">«Prev</a>
+                 </li>
+                 <?php for ($i = 1; $i <= $pages; $i++) : ?>
+                   <li class="page-item">
+                     <a class="page-link" href="users?pg=<?= $i ?>"><?= $i; ?></a>
+                   </li>
+                 <?php endfor; ?>
+                 <li class="page-item <?= $pg == $pages ? 'disabled' : '' ?>">
+                   <a class="page-link" href="users?pg=<?= $pg + 1 ?>">Next»</a>
+                 </li>
+                 <li class="page-item">
+                   <a class="page-link" href="users?pg=<?= $pages ?>">Last page</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+           <!-- /.card -->
+         </div>
+       </div>
+     </div><!-- /.container-fluid -->
+   </section>
+   <!-- /.content -->
+ </div>

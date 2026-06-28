@@ -10,7 +10,15 @@ if(isset($_POST['delete_id'])){
     $msg = $res;
   }
 }
+$limit = 2;
+$pages = User::getPageNo(2);
 $users = User::readAll();
+
+if(isset($_GET['pg'])){
+  $pg = $_GET['pg'];
+  $users = User::readAll($pg, $limit);
+}
+
 ?>
 
 <div class="main-panel">
@@ -63,6 +71,27 @@ $users = User::readAll();
             </table>
 
           </div>
+          <div class="card-footer clearfix">
+               <ul class="pagination pagination-sm m-0 float-right">
+                 <li class="page-item <?= $pg <= 1 ? 'disabled' : '' ?>">
+                   <a class="page-link" href="users?pg=1">First Page</a>
+                 </li>
+                 <li class="page-item <?= $pg <= 1 ? 'disabled' : '' ?>">
+                   <a class="page-link" href="users?pg=<?= $pg - 1 ?>">«Prev</a>
+                 </li>
+                 <?php for ($i = 1; $i <= $pages; $i++) : ?>
+                   <li class="page-item">
+                     <a class="page-link" href="users?pg=<?= $i ?>"><?= $i; ?></a>
+                   </li>
+                 <?php endfor; ?>
+                 <li class="page-item <?= $pg == $pages ? 'disabled' : '' ?>">
+                   <a class="page-link" href="users?pg=<?= $pg + 1 ?>">Next»</a>
+                 </li>
+                 <li class="page-item">
+                   <a class="page-link" href="users?pg=<?= $pages ?>">Last page</a>
+                 </li>
+               </ul>
+             </div>
         </div>
       </div>
     </div>

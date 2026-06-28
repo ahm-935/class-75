@@ -70,6 +70,15 @@ class User {
             return true;
         }
     }
+     static public function getPageNo($_no_of_rows) {
+        global $db;
+        $sql = "SELECT COUNT(id) as total FROM users";
+        $result = $db->query($sql);
+        $row = $result->fetch_assoc();
+        // return $row;
+        return ceil($row['total'] / $_no_of_rows);
+        // return $result->fetch_assoc()['total'];
+    }
 }
 
 

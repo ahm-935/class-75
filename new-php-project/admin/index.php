@@ -1,4 +1,6 @@
 <?php
+session_start();
+print_r($_SESSION);
 include_once 'config/base.php';
 include_once 'config/db.php';
 ?>

@@ -3,9 +3,13 @@ if (isset($_GET['page'])) {
     $page = $_GET['page'];
 
 
-    if($page == 'dashboard' ){
+    if(isset($_SESSION['id']) == false ){
+        include_once 'views/pages/auth/login.php';
+    }
+    else if($page == 'dashboard' ){
         include_once 'views/pages/dashboard.php';
-    }else if($page == 'form' || $page == 'form.php'){
+    }
+    else if($page == 'form' || $page == 'form.php'){
         include_once 'views/pages/form.php';
     }
     else if($page == 'table' || $page == 'table.php'){
@@ -27,6 +31,9 @@ if (isset($_GET['page'])) {
     }
     else if($page == 'pos'){
         include_once 'views/pages/pos.php';
+    }
+    else if($page == 'login'){
+        include_once 'views/pages/auth/login.php';
     }
     else{
         include_once('views/pages/dashboard.php');

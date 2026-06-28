@@ -1,3 +1,11 @@
+ <?php
+if(isset($_POST['logout'])) {
+    // echo "logout";
+    session_destroy();
+    header('Location: login');
+}
+ ?>
+ 
  <nav class="app-header navbar navbar-expand bg-body">
             <!--begin::Container-->
             <div class="container-fluid">
@@ -252,9 +260,11 @@
                             <!--end::Menu Body-->
                             <!--begin::Menu Footer-->
                             <li class="user-footer">
-                                <a href="#" class="btn btn-outline-secondary">Profile</a>
-                                <a href="#" class="btn btn-outline-danger float-end">Sign out</a>
+                            <form action="" method="POST">    
+                            <a href="#" class="btn btn-outline-secondary">Profile</a>
+                                <button type="submit" name="logout" class="btn btn-outline-danger">Sign out</button>
                             </li>
+                            </form>
                             <!--end::Menu Footer-->
                         </ul>
                     </li>

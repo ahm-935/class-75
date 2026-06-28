@@ -70,6 +70,9 @@ class User {
         return ceil($row['total'] / $_no_of_rows);
         // return $result->fetch_assoc()['total'];
     }
+    protected function getPassa(){
+        return $this->password;
+    }
 
 }   
 
