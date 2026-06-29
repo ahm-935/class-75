@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-print_r($_SESSION);
+// print_r($_SESSION);
 // if(!isset($_SESSION['id'])) {
 //     header('Location: login');
 // }
