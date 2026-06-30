@@ -46,6 +46,7 @@
                                 </p>
                             </a>
                         </li>
+                        <?php if($_SESSION['role_id'] != 3 ) : ?>
                         <li class="nav-item">
                             <a href="pos" class="nav-link">
                                 <i class="fa-brands fa-wpforms"></i>
@@ -54,6 +55,7 @@
                                 </p>
                             </a>
                         </li>
+                        <?php endif ?>
                         <li class="nav-item">
                             <a href="products" class="nav-link">
                                 <i class="nav-icon bi bi-table"></i>

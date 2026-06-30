@@ -26,7 +26,7 @@ if (isset($_GET['page'])) {
     else if($page == 'products'){
         include_once 'views/pages/products/manage.php';
     }
-    else if($page == 'create-product'){
+    else if($page == 'create-product' || $page == 'create'){
         include_once 'views/pages/products/create.php';
     }
     else if($page == 'pos'){
@@ -34,6 +34,9 @@ if (isset($_GET['page'])) {
     }
     else if($page == 'login'){
         include_once 'views/pages/auth/login.php';
+    }
+    else if($page == 'access-deny' || $page == '404'){
+        include_once 'views/pages/access-deny.php';
     }
     else{
         include_once('views/pages/dashboard.php');

@@ -5,6 +5,8 @@ ob_start();
 // if(!isset($_SESSION['id'])) {
 //     header('Location: login');
 // }
+print_r($_SESSION);
+echo password_hash('0000', PASSWORD_DEFAULT);
     include_once 'config/base.php';
     include_once 'config/db.php';
 

@@ -48,9 +48,11 @@
        <div class="row">
          <div class="col-12">
            <div class="card">
+            <?php if($_SESSION['role_id'] != 3 ) : ?>
              <div class="card-header">
                <a href="create-user" class="btn btn-sm btn-primary">Create User</a>
              </div>
+             <?php endif; ?>
              <!-- /.card-header -->
              <div class="card-body p-0">
                <div class="table-responsive">
@@ -61,7 +63,9 @@
                        <th>ID</th>
                        <th>Name</th>
                        <th>Email</th>
+                       <?php if($_SESSION['role_id'] != 3 ) : ?>
                        <th>Actions</th>
+                       <?php endif; ?>
                      </tr>
                    </thead>
                    <tbody>
@@ -70,16 +74,20 @@
                          <td><?= $item['id'] ?></td>
                          <td><?= $item['name'] ?></td>
                          <td><?= $item['email'] ?></td>
+                         <?php if($_SESSION['role_id'] != 3 ) : ?>
                          <td>
                            <div class="btn-group">
                              <button type="button" class="btn btn-sm btn-default"><i class="fa fa-eye text-primary"></i></button>
                              <a href="edit?id=<?= $item['id'] ?>" class="btn btn-sm btn-default"><i class="fa fa-edit text-warning"></i></a>
+                              <?php if($_SESSION['role_id'] != 2 ) : ?>
                              <form action="" method="POST">
                                <input type="hidden" name="delete_id" value="<?= $item['id'] ?>">
                                <button type="submit" class="btn btn-sm btn-default"><i class="fa fa-trash text-danger"></i></button>
                              </form>
+                             <?php endif; ?>
                            </div>
                          </td>
+                         <?php endif; ?>
                        </tr>
                      <?php } ?>
                    </tbody>
